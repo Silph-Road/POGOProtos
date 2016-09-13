@@ -145,8 +145,14 @@
     <Compile Include="Networking\Envelopes\RequestEnvelope.g.cs" />
     <Compile Include="Networking\Envelopes\ResponseEnvelope.g.cs" />
     <Compile Include="Networking\Envelopes\Signature.g.cs" />
-    <Compile Include="Networking\Envelopes\Unknown6.g.cs" />
-    <Compile Include="Networking\Envelopes\Unknown6Response.g.cs" />
+    <Compile Include="Networking\Platform\PlatformRequestType.g.cs" />
+    <Compile Include="Networking\Platform\Requests\BuyItemAndroidRequest.g.cs" />
+    <Compile Include="Networking\Platform\Requests\BuyItemPokeCoinsRequest.g.cs" />
+    <Compile Include="Networking\Platform\Requests\SendEncryptedSignatureRequest.g.cs" />
+    <Compile Include="Networking\Platform\Responses\BuyItemAndroidResponse.g.cs" />
+    <Compile Include="Networking\Platform\Responses\BuyItemPokeCoinsResponse.g.cs" />
+    <Compile Include="Networking\Platform\Responses\GetStoreItemsResponse.g.cs" />
+    <Compile Include="Networking\Platform\Responses\SendEncryptedSignatureResponse.g.cs" />
     <Compile Include="Networking\Requests\Messages\AddFortModifierMessage.g.cs" />
     <Compile Include="Networking\Requests\Messages\AttackGymMessage.g.cs" />
     <Compile Include="Networking\Requests\Messages\CatchPokemonMessage.g.cs" />
