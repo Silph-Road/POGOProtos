@@ -23,60 +23,69 @@ namespace POGOProtos.Networking.Envelopes {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9QT0dPUHJvdG9zL05ldHdvcmtpbmcvRW52ZWxvcGVzL1NpZ25hdHVyZS5w",
-            "cm90bxIfUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVudmVsb3BlcyLSDwoJU2ln",
-            "bmF0dXJlEh0KFXRpbWVzdGFtcF9zaW5jZV9zdGFydBgCIAEoBBJMCgxsb2Nh",
-            "dGlvbl9maXgYBCADKAsyNi5QT0dPUHJvdG9zLk5ldHdvcmtpbmcuRW52ZWxv",
-            "cGVzLlNpZ25hdHVyZS5Mb2NhdGlvbkZpeBJLCghncHNfaW5mbxgFIAEoCzI5",
-            "LlBPR09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuU2lnbmF0dXJlLkFu",
-            "ZHJvaWRHcHNJbmZvEkoKC3NlbnNvcl9pbmZvGAcgASgLMjUuUE9HT1Byb3Rv",
-            "cy5OZXR3b3JraW5nLkVudmVsb3Blcy5TaWduYXR1cmUuU2Vuc29ySW5mbxJK",
-            "CgtkZXZpY2VfaW5mbxgIIAEoCzI1LlBPR09Qcm90b3MuTmV0d29ya2luZy5F",
-            "bnZlbG9wZXMuU2lnbmF0dXJlLkRldmljZUluZm8SUgoPYWN0aXZpdHlfc3Rh",
-            "dHVzGAkgASgLMjkuUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVudmVsb3Blcy5T",
-            "aWduYXR1cmUuQWN0aXZpdHlTdGF0dXMSFgoObG9jYXRpb25faGFzaDEYCiAB",
-            "KA0SFgoObG9jYXRpb25faGFzaDIYFCABKA0SFAoMc2Vzc2lvbl9oYXNoGBYg",
-            "ASgMEhEKCXRpbWVzdGFtcBgXIAEoBBIUCgxyZXF1ZXN0X2hhc2gYGCADKAQS",
-            "EQoJdW5rbm93bjI1GBkgASgDGogCCgtMb2NhdGlvbkZpeBIQCghwcm92aWRl",
-            "chgBIAEoCRIaChJ0aW1lc3RhbXBfc25hcHNob3QYAiABKAQSEAoIYWx0aXR1",
-            "ZGUYBCABKAISEAoIbGF0aXR1ZGUYDSABKAISEQoJbG9uZ2l0dWRlGA4gASgC",
-            "Eg0KBXNwZWVkGBIgASgCEg4KBmNvdXJzZRgUIAEoAhIbChNob3Jpem9udGFs",
-            "X2FjY3VyYWN5GBUgASgCEhkKEXZlcnRpY2FsX2FjY3VyYWN5GBYgASgCEhcK",
-            "D3Byb3ZpZGVyX3N0YXR1cxgaIAEoBBINCgVmbG9vchgbIAEoDRIVCg1sb2Nh",
-            "dGlvbl90eXBlGBwgASgEGq8BCg5BbmRyb2lkR3BzSW5mbxITCgt0aW1lX3Rv",
-            "X2ZpeBgBIAEoBBIWCg5zYXRlbGxpdGVzX3BybhgCIAMoBRIPCgdhemltdXRo",
-            "GAMgAygCEhEKCWVsZXZhdGlvbhgEIAMoAhILCgNzbnIYBSADKAISEwoLaGFz",
-            "X2FsbWFuYWMYBiADKAgSFQoNaGFzX2VwaGVtZXJpcxgHIAMoCBITCgt1c2Vk",
-            "X2luX2ZpeBgIIAMoCBrEAwoKU2Vuc29ySW5mbxIaChJ0aW1lc3RhbXBfc25h",
-            "cHNob3QYASABKAQSHQoVbGluZWFyX2FjY2VsZXJhdGlvbl94GAMgASgBEh0K",
-            "FWxpbmVhcl9hY2NlbGVyYXRpb25feRgEIAEoARIdChVsaW5lYXJfYWNjZWxl",
-            "cmF0aW9uX3oYBSABKAESGAoQbWFnbmV0aWNfZmllbGRfeBgGIAEoARIYChBt",
-            "YWduZXRpY19maWVsZF95GAcgASgBEhgKEG1hZ25ldGljX2ZpZWxkX3oYCCAB",
-            "KAESGQoRcm90YXRpb25fdmVjdG9yX3gYCiABKAESGQoRcm90YXRpb25fdmVj",
-            "dG9yX3kYCyABKAESGQoRcm90YXRpb25fdmVjdG9yX3oYDCABKAESFwoPZ3ly",
-            "b3Njb3BlX3Jhd194GA0gASgBEhcKD2d5cm9zY29wZV9yYXdfeRgOIAEoARIX",
-            "Cg9neXJvc2NvcGVfcmF3X3oYDyABKAESEQoJZ3Jhdml0eV94GBAgASgBEhEK",
-            "CWdyYXZpdHlfeRgRIAEoARIRCglncmF2aXR5X3oYEiABKAESGgoSYWNjZWxl",
-            "cm9tZXRlcl9heGVzGBMgASgEGtoCCgpEZXZpY2VJbmZvEhEKCWRldmljZV9p",
-            "ZBgBIAEoCRIaChJhbmRyb2lkX2JvYXJkX25hbWUYAiABKAkSGgoSYW5kcm9p",
-            "ZF9ib290bG9hZGVyGAMgASgJEhQKDGRldmljZV9icmFuZBgEIAEoCRIUCgxk",
-            "ZXZpY2VfbW9kZWwYBSABKAkSHwoXZGV2aWNlX21vZGVsX2lkZW50aWZpZXIY",
-            "BiABKAkSGQoRZGV2aWNlX21vZGVsX2Jvb3QYByABKAkSHQoVaGFyZHdhcmVf",
-            "bWFudWZhY3R1cmVyGAggASgJEhYKDmhhcmR3YXJlX21vZGVsGAkgASgJEhYK",
-            "DmZpcm13YXJlX2JyYW5kGAogASgJEhUKDWZpcm13YXJlX3RhZ3MYDCABKAkS",
-            "FQoNZmlybXdhcmVfdHlwZRgNIAEoCRIcChRmaXJtd2FyZV9maW5nZXJwcmlu",
-            "dBgOIAEoCRq7AQoOQWN0aXZpdHlTdGF0dXMSFQoNc3RhcnRfdGltZV9tcxgB",
-            "IAEoBBIWCg51bmtub3duX3N0YXR1cxgCIAEoCBIPCgd3YWxraW5nGAMgASgI",
-            "Eg8KB3J1bm5pbmcYBCABKAgSEgoKc3RhdGlvbmFyeRgFIAEoCBISCgphdXRv",
-            "bW90aXZlGAYgASgIEg8KB3RpbHRpbmcYByABKAgSDwoHY3ljbGluZxgIIAEo",
-            "CBIOCgZzdGF0dXMYCSABKAxiBnByb3RvMw=="));
+            "cm90bxIfUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVudmVsb3BlcyKUEgoJU2ln",
+            "bmF0dXJlEj8KBmZpZWxkMRgBIAMoCzIvLlBPR09Qcm90b3MuTmV0d29ya2lu",
+            "Zy5FbnZlbG9wZXMuVW5rbm93bk1lc3NhZ2USIAoYdGltZXN0YW1wX21zX3Np",
+            "bmNlX3N0YXJ0GAIgASgDEg4KBmZpZWxkMxgDIAEoCRJTChBsb2NhdGlvbl91",
+            "cGRhdGVzGAQgAygLMjkuUE9HT1Byb3Rvcy5OZXR3b3JraW5nLkVudmVsb3Bl",
+            "cy5TaWduYXR1cmUuTG9jYXRpb25VcGRhdGUSUwoQYW5kcm9pZF9ncHNfaW5m",
+            "bxgFIAMoCzI5LlBPR09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuU2ln",
+            "bmF0dXJlLkFuZHJvaWRHcHNJbmZvEj8KBmZpZWxkNhgGIAMoCzIvLlBPR09Q",
+            "cm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuVW5rbm93bk1lc3NhZ2USTwoO",
+            "c2Vuc29yX3VwZGF0ZXMYByADKAsyNy5QT0dPUHJvdG9zLk5ldHdvcmtpbmcu",
+            "RW52ZWxvcGVzLlNpZ25hdHVyZS5TZW5zb3JVcGRhdGUSSgoLZGV2aWNlX2lu",
+            "Zm8YCCABKAsyNS5QT0dPUHJvdG9zLk5ldHdvcmtpbmcuRW52ZWxvcGVzLlNp",
+            "Z25hdHVyZS5EZXZpY2VJbmZvElEKD2lvc19kZXZpY2VfaW5mbxgJIAEoCzI4",
+            "LlBPR09Qcm90b3MuTmV0d29ya2luZy5FbnZlbG9wZXMuU2lnbmF0dXJlLklP",
+            "U0RldmljZUluZm8SIwobbG9jYXRpb25faGFzaF9ieV90b2tlbl9zZWVkGAog",
+            "ASgFEg8KB2ZpZWxkMTEYCyABKAgSDwoHZmllbGQxMhgMIAEoCBIPCgdmaWVs",
+            "ZDEzGA0gASgFEg8KB2ZpZWxkMTQYDiABKAUSDwoHZmllbGQxNRgPIAEoCRIP",
+            "CgdmaWVsZDE2GBAgASgFEg8KB2ZpZWxkMTcYESABKAkSDwoHZmllbGQxOBgS",
+            "IAEoCRIPCgdmaWVsZDE5GBMgASgIEhUKDWxvY2F0aW9uX2hhc2gYFCABKAUS",
+            "DwoHZmllbGQyMRgVIAEoCBIPCgdmaWVsZDIyGBYgASgMEhoKEmVwb2NoX3Rp",
+            "bWVzdGFtcF9tcxgXIAEoBBIWCg5yZXF1ZXN0X2hhc2hlcxgYIAMoBBIPCgdm",
+            "aWVsZDI1GBkgASgEGo8CCg5Mb2NhdGlvblVwZGF0ZRIMCgRuYW1lGAEgASgJ",
+            "EhQKDHRpbWVzdGFtcF9tcxgCIAEoAxIQCghhbHRpdHVkZRgEIAEoAhIQCghs",
+            "YXRpdHVkZRgNIAEoAhIRCglsb25naXR1ZGUYDiABKAISFAoMZGV2aWNlX3Nw",
+            "ZWVkGBIgASgCEhUKDWRldmljZV9jb3Vyc2UYFCABKAISGwoTaG9yaXpvbnRh",
+            "bF9hY2N1cmFjeRgVIAEoAhIZChF2ZXJ0aWNhbF9hY2N1cmFjeRgWIAEoAhIX",
+            "Cg9wcm92aWRlcl9zdGF0dXMYGiABKAUSDQoFZmxvb3IYGyABKAMSFQoNbG9j",
+            "YXRpb25fdHlwZRgcIAEoBRqmAQoNSU9TRGV2aWNlSW5mbxINCgVib29sMRgB",
+            "IAEoCBINCgVib29sMhgCIAEoCBINCgVib29sMxgDIAEoCBINCgVib29sNBgE",
+            "IAEoCBINCgVib29sNRgFIAEoCBINCgVib29sNhgGIAEoCBINCgVib29sNxgH",
+            "IAEoCBINCgVib29sOBgIIAEoCBINCgVib29sORgJIAEoCBIOCgZib29sMTAY",
+            "CiABKAgasQMKDFNlbnNvclVwZGF0ZRIRCgl0aW1lc3RhbXAYASABKAQSFgoO",
+            "YWNjZWxlcmF0aW9uX3gYAyABKAESFgoOYWNjZWxlcmF0aW9uX3kYBCABKAES",
+            "FgoOYWNjZWxlcmF0aW9uX3oYBSABKAESGAoQbWFnbmV0aWNfZmllbGRfeBgG",
+            "IAEoARIYChBtYWduZXRpY19maWVsZF95GAcgASgBEhgKEG1hZ25ldGljX2Zp",
+            "ZWxkX3oYCCABKAESHwoXbWFnbmV0aWNfZmllbGRfYWNjdXJhY3kYCSABKAUS",
+            "FgoOYXR0aXR1ZGVfcGl0Y2gYCiABKAESFAoMYXR0aXR1ZGVfeWF3GAsgASgB",
+            "EhUKDWF0dGl0dWRlX3JvbGwYDCABKAESFwoPcm90YXRpb25fcmF0ZV94GA0g",
+            "ASgBEhcKD3JvdGF0aW9uX3JhdGVfeRgOIAEoARIXCg9yb3RhdGlvbl9yYXRl",
+            "X3oYDyABKAESEQoJZ3Jhdml0eV94GBAgASgBEhEKCWdyYXZpdHlfeRgRIAEo",
+            "ARIRCglncmF2aXR5X3oYEiABKAESDgoGc3RhdHVzGBMgASgFGtsCCgpEZXZp",
+            "Y2VJbmZvEhEKCWRldmljZV9pZBgBIAEoCRIaChJhbmRyb2lkX2JvYXJkX25h",
+            "bWUYAiABKAkSGgoSYW5kcm9pZF9ib290bG9hZGVyGAMgASgJEhQKDGRldmlj",
+            "ZV9icmFuZBgEIAEoCRIUCgxkZXZpY2VfbW9kZWwYBSABKAkSHwoXZGV2aWNl",
+            "X21vZGVsX2lkZW50aWZpZXIYBiABKAkSGgoSZGV2aWNlX2NvbW1zX21vZGVs",
+            "GAcgASgJEh0KFWhhcmR3YXJlX21hbnVmYWN0dXJlchgIIAEoCRIWCg5oYXJk",
+            "d2FyZV9tb2RlbBgJIAEoCRIWCg5maXJtd2FyZV9icmFuZBgKIAEoCRIVCg1m",
+            "aXJtd2FyZV90YWdzGAwgASgJEhUKDWZpcm13YXJlX3R5cGUYDSABKAkSHAoU",
+            "ZmlybXdhcmVfZmluZ2VycHJpbnQYDiABKAkarwEKDkFuZHJvaWRHcHNJbmZv",
+            "EhMKC3RpbWVfdG9fZml4GAEgASgEEhYKDnNhdGVsbGl0ZXNfcHJuGAIgAygF",
+            "Eg8KB2F6aW11dGgYAyADKAISEQoJZWxldmF0aW9uGAQgAygCEgsKA3NuchgF",
+            "IAMoAhITCgtoYXNfYWxtYW5hYxgGIAMoCBIVCg1oYXNfZXBoZW1lcmlzGAcg",
+            "AygIEhMKC3VzZWRfaW5fZml4GAggAygIIhAKDlVua25vd25NZXNzYWdlYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature), global::POGOProtos.Networking.Envelopes.Signature.Parser, new[]{ "TimestampSinceStart", "LocationFix", "GpsInfo", "SensorInfo", "DeviceInfo", "ActivityStatus", "LocationHash1", "LocationHash2", "SessionHash", "Timestamp", "RequestHash", "Unknown25" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix), global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix.Parser, new[]{ "Provider", "TimestampSnapshot", "Altitude", "Latitude", "Longitude", "Speed", "Course", "HorizontalAccuracy", "VerticalAccuracy", "ProviderStatus", "Floor", "LocationType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo.Parser, new[]{ "TimeToFix", "SatellitesPrn", "Azimuth", "Elevation", "Snr", "HasAlmanac", "HasEphemeris", "UsedInFix" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo.Parser, new[]{ "TimestampSnapshot", "LinearAccelerationX", "LinearAccelerationY", "LinearAccelerationZ", "MagneticFieldX", "MagneticFieldY", "MagneticFieldZ", "RotationVectorX", "RotationVectorY", "RotationVectorZ", "GyroscopeRawX", "GyroscopeRawY", "GyroscopeRawZ", "GravityX", "GravityY", "GravityZ", "AccelerometerAxes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo.Parser, new[]{ "DeviceId", "AndroidBoardName", "AndroidBootloader", "DeviceBrand", "DeviceModel", "DeviceModelIdentifier", "DeviceModelBoot", "HardwareManufacturer", "HardwareModel", "FirmwareBrand", "FirmwareTags", "FirmwareType", "FirmwareFingerprint" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus), global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus.Parser, new[]{ "StartTimeMs", "UnknownStatus", "Walking", "Running", "Stationary", "Automotive", "Tilting", "Cycling", "Status" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature), global::POGOProtos.Networking.Envelopes.Signature.Parser, new[]{ "Field1", "TimestampMsSinceStart", "Field3", "LocationUpdates", "AndroidGpsInfo", "Field6", "SensorUpdates", "DeviceInfo", "IosDeviceInfo", "LocationHashByTokenSeed", "Field11", "Field12", "Field13", "Field14", "Field15", "Field16", "Field17", "Field18", "Field19", "LocationHash", "Field21", "Field22", "EpochTimestampMs", "RequestHashes", "Field25" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.LocationUpdate), global::POGOProtos.Networking.Envelopes.Signature.Types.LocationUpdate.Parser, new[]{ "Name", "TimestampMs", "Altitude", "Latitude", "Longitude", "DeviceSpeed", "DeviceCourse", "HorizontalAccuracy", "VerticalAccuracy", "ProviderStatus", "Floor", "LocationType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.IOSDeviceInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.IOSDeviceInfo.Parser, new[]{ "Bool1", "Bool2", "Bool3", "Bool4", "Bool5", "Bool6", "Bool7", "Bool8", "Bool9", "Bool10" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.SensorUpdate), global::POGOProtos.Networking.Envelopes.Signature.Types.SensorUpdate.Parser, new[]{ "Timestamp", "AccelerationX", "AccelerationY", "AccelerationZ", "MagneticFieldX", "MagneticFieldY", "MagneticFieldZ", "MagneticFieldAccuracy", "AttitudePitch", "AttitudeYaw", "AttitudeRoll", "RotationRateX", "RotationRateY", "RotationRateZ", "GravityX", "GravityY", "GravityZ", "Status" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo.Parser, new[]{ "DeviceId", "AndroidBoardName", "AndroidBootloader", "DeviceBrand", "DeviceModel", "DeviceModelIdentifier", "DeviceCommsModel", "HardwareManufacturer", "HardwareModel", "FirmwareBrand", "FirmwareTags", "FirmwareType", "FirmwareFingerprint" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo), global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo.Parser, new[]{ "TimeToFix", "SatellitesPrn", "Azimuth", "Elevation", "Snr", "HasAlmanac", "HasEphemeris", "UsedInFix" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Networking.Envelopes.UnknownMessage), global::POGOProtos.Networking.Envelopes.UnknownMessage.Parser, null, null, null, null)
           }));
     }
     #endregion
@@ -107,18 +116,31 @@ namespace POGOProtos.Networking.Envelopes {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Signature(Signature other) : this() {
-      timestampSinceStart_ = other.timestampSinceStart_;
-      locationFix_ = other.locationFix_.Clone();
-      GpsInfo = other.gpsInfo_ != null ? other.GpsInfo.Clone() : null;
-      SensorInfo = other.sensorInfo_ != null ? other.SensorInfo.Clone() : null;
+      field1_ = other.field1_.Clone();
+      timestampMsSinceStart_ = other.timestampMsSinceStart_;
+      field3_ = other.field3_;
+      locationUpdates_ = other.locationUpdates_.Clone();
+      androidGpsInfo_ = other.androidGpsInfo_.Clone();
+      field6_ = other.field6_.Clone();
+      sensorUpdates_ = other.sensorUpdates_.Clone();
       DeviceInfo = other.deviceInfo_ != null ? other.DeviceInfo.Clone() : null;
-      ActivityStatus = other.activityStatus_ != null ? other.ActivityStatus.Clone() : null;
-      locationHash1_ = other.locationHash1_;
-      locationHash2_ = other.locationHash2_;
-      sessionHash_ = other.sessionHash_;
-      timestamp_ = other.timestamp_;
-      requestHash_ = other.requestHash_.Clone();
-      unknown25_ = other.unknown25_;
+      IosDeviceInfo = other.iosDeviceInfo_ != null ? other.IosDeviceInfo.Clone() : null;
+      locationHashByTokenSeed_ = other.locationHashByTokenSeed_;
+      field11_ = other.field11_;
+      field12_ = other.field12_;
+      field13_ = other.field13_;
+      field14_ = other.field14_;
+      field15_ = other.field15_;
+      field16_ = other.field16_;
+      field17_ = other.field17_;
+      field18_ = other.field18_;
+      field19_ = other.field19_;
+      locationHash_ = other.locationHash_;
+      field21_ = other.field21_;
+      field22_ = other.field22_;
+      epochTimestampMs_ = other.epochTimestampMs_;
+      requestHashes_ = other.requestHashes_.Clone();
+      field25_ = other.field25_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -126,55 +148,90 @@ namespace POGOProtos.Networking.Envelopes {
       return new Signature(this);
     }
 
-    /// <summary>Field number for the "timestamp_since_start" field.</summary>
-    public const int TimestampSinceStartFieldNumber = 2;
-    private ulong timestampSinceStart_;
+    /// <summary>Field number for the "field1" field.</summary>
+    public const int Field1FieldNumber = 1;
+    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.UnknownMessage> _repeated_field1_codec
+        = pb::FieldCodec.ForMessage(10, global::POGOProtos.Networking.Envelopes.UnknownMessage.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.UnknownMessage> field1_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.UnknownMessage>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.UnknownMessage> Field1 {
+      get { return field1_; }
+    }
+
+    /// <summary>Field number for the "timestamp_ms_since_start" field.</summary>
+    public const int TimestampMsSinceStartFieldNumber = 2;
+    private long timestampMsSinceStart_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TimestampMsSinceStart {
+      get { return timestampMsSinceStart_; }
+      set {
+        timestampMsSinceStart_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field3" field.</summary>
+    public const int Field3FieldNumber = 3;
+    private string field3_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Field3 {
+      get { return field3_; }
+      set {
+        field3_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "location_updates" field.</summary>
+    public const int LocationUpdatesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationUpdate> _repeated_locationUpdates_codec
+        = pb::FieldCodec.ForMessage(34, global::POGOProtos.Networking.Envelopes.Signature.Types.LocationUpdate.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationUpdate> locationUpdates_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationUpdate>();
     /// <summary>
-    ///  in ms
+    ///  Multiple location updates at a time. This is all the updates since the last time we sent a request
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong TimestampSinceStart {
-      get { return timestampSinceStart_; }
-      set {
-        timestampSinceStart_ = value;
-      }
+    public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationUpdate> LocationUpdates {
+      get { return locationUpdates_; }
     }
 
-    /// <summary>Field number for the "location_fix" field.</summary>
-    public const int LocationFixFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix> _repeated_locationFix_codec
-        = pb::FieldCodec.ForMessage(34, global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix.Parser);
-    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix> locationFix_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix>();
+    /// <summary>Field number for the "android_gps_info" field.</summary>
+    public const int AndroidGpsInfoFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo> _repeated_androidGpsInfo_codec
+        = pb::FieldCodec.ForMessage(42, global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo> androidGpsInfo_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.LocationFix> LocationFix {
-      get { return locationFix_; }
+    public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo> AndroidGpsInfo {
+      get { return androidGpsInfo_; }
     }
 
-    /// <summary>Field number for the "gps_info" field.</summary>
-    public const int GpsInfoFieldNumber = 5;
-    private global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo gpsInfo_;
+    /// <summary>Field number for the "field6" field.</summary>
+    public const int Field6FieldNumber = 6;
+    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.UnknownMessage> _repeated_field6_codec
+        = pb::FieldCodec.ForMessage(50, global::POGOProtos.Networking.Envelopes.UnknownMessage.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.UnknownMessage> field6_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.UnknownMessage>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo GpsInfo {
-      get { return gpsInfo_; }
-      set {
-        gpsInfo_ = value;
-      }
+    public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.UnknownMessage> Field6 {
+      get { return field6_; }
     }
 
-    /// <summary>Field number for the "sensor_info" field.</summary>
-    public const int SensorInfoFieldNumber = 7;
-    private global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo sensorInfo_;
+    /// <summary>Field number for the "sensor_updates" field.</summary>
+    public const int SensorUpdatesFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.Signature.Types.SensorUpdate> _repeated_sensorUpdates_codec
+        = pb::FieldCodec.ForMessage(58, global::POGOProtos.Networking.Envelopes.Signature.Types.SensorUpdate.Parser);
+    private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.SensorUpdate> sensorUpdates_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.SensorUpdate>();
+    /// <summary>
+    ///  All the sensor updates since the last time we sent a request. (Seems to actually be throttled to 1-3 at a time)
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo SensorInfo {
-      get { return sensorInfo_; }
-      set {
-        sensorInfo_ = value;
-      }
+    public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Signature.Types.SensorUpdate> SensorUpdates {
+      get { return sensorUpdates_; }
     }
 
     /// <summary>Field number for the "device_info" field.</summary>
     public const int DeviceInfoFieldNumber = 8;
     private global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo deviceInfo_;
+    /// <summary>
+    ///  device info - need to find this still to verify everything
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo DeviceInfo {
       get { return deviceInfo_; }
@@ -183,97 +240,201 @@ namespace POGOProtos.Networking.Envelopes {
       }
     }
 
-    /// <summary>Field number for the "activity_status" field.</summary>
-    public const int ActivityStatusFieldNumber = 9;
-    private global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus activityStatus_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus ActivityStatus {
-      get { return activityStatus_; }
-      set {
-        activityStatus_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "location_hash1" field.</summary>
-    public const int LocationHash1FieldNumber = 10;
-    private uint locationHash1_;
+    /// <summary>Field number for the "ios_device_info" field.</summary>
+    public const int IosDeviceInfoFieldNumber = 9;
+    private global::POGOProtos.Networking.Envelopes.Signature.Types.IOSDeviceInfo iosDeviceInfo_;
     /// <summary>
-    ///  Location1 hashed signed based on the auth_token or auth_info - xxHash32
+    ///  iOS only - likely device capabilities? (Or even simpler being iOS device version flags)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint LocationHash1 {
-      get { return locationHash1_; }
+    public global::POGOProtos.Networking.Envelopes.Signature.Types.IOSDeviceInfo IosDeviceInfo {
+      get { return iosDeviceInfo_; }
       set {
-        locationHash1_ = value;
+        iosDeviceInfo_ = value;
       }
     }
 
-    /// <summary>Field number for the "location_hash2" field.</summary>
-    public const int LocationHash2FieldNumber = 20;
-    private uint locationHash2_;
+    /// <summary>Field number for the "location_hash_by_token_seed" field.</summary>
+    public const int LocationHashByTokenSeedFieldNumber = 10;
+    private int locationHashByTokenSeed_;
     /// <summary>
-    ///  Location2 hashed (unsigned) - xxHash32
+    ///  Hashed location using the auth token as the seed (hashed auth token -> location hash seed)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint LocationHash2 {
-      get { return locationHash2_; }
+    public int LocationHashByTokenSeed {
+      get { return locationHashByTokenSeed_; }
       set {
-        locationHash2_ = value;
+        locationHashByTokenSeed_ = value;
       }
     }
 
-    /// <summary>Field number for the "session_hash" field.</summary>
-    public const int SessionHashFieldNumber = 22;
-    private pb::ByteString sessionHash_ = pb::ByteString.Empty;
+    /// <summary>Field number for the "field11" field.</summary>
+    public const int Field11FieldNumber = 11;
+    private bool field11_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Field11 {
+      get { return field11_; }
+      set {
+        field11_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field12" field.</summary>
+    public const int Field12FieldNumber = 12;
+    private bool field12_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Field12 {
+      get { return field12_; }
+      set {
+        field12_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field13" field.</summary>
+    public const int Field13FieldNumber = 13;
+    private int field13_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Field13 {
+      get { return field13_; }
+      set {
+        field13_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field14" field.</summary>
+    public const int Field14FieldNumber = 14;
+    private int field14_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Field14 {
+      get { return field14_; }
+      set {
+        field14_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field15" field.</summary>
+    public const int Field15FieldNumber = 15;
+    private string field15_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Field15 {
+      get { return field15_; }
+      set {
+        field15_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field16" field.</summary>
+    public const int Field16FieldNumber = 16;
+    private int field16_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Field16 {
+      get { return field16_; }
+      set {
+        field16_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field17" field.</summary>
+    public const int Field17FieldNumber = 17;
+    private string field17_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Field17 {
+      get { return field17_; }
+      set {
+        field17_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field18" field.</summary>
+    public const int Field18FieldNumber = 18;
+    private string field18_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Field18 {
+      get { return field18_; }
+      set {
+        field18_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field19" field.</summary>
+    public const int Field19FieldNumber = 19;
+    private bool field19_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Field19 {
+      get { return field19_; }
+      set {
+        field19_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "location_hash" field.</summary>
+    public const int LocationHashFieldNumber = 20;
+    private int locationHash_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int LocationHash {
+      get { return locationHash_; }
+      set {
+        locationHash_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field21" field.</summary>
+    public const int Field21FieldNumber = 21;
+    private bool field21_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Field21 {
+      get { return field21_; }
+      set {
+        field21_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field22" field.</summary>
+    public const int Field22FieldNumber = 22;
+    private pb::ByteString field22_ = pb::ByteString.Empty;
     /// <summary>
-    ///  16 bytes, unique per session
+    ///  replay check - Changes every 5 minutes or so. Generation unknown but pointed to by 0001B8614
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString SessionHash {
-      get { return sessionHash_; }
+    public pb::ByteString Field22 {
+      get { return field22_; }
       set {
-        sessionHash_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        field22_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "timestamp" field.</summary>
-    public const int TimestampFieldNumber = 23;
-    private ulong timestamp_;
-    /// <summary>
-    ///  epoch timestamp in ms
-    /// </summary>
+    /// <summary>Field number for the "epoch_timestamp_ms" field.</summary>
+    public const int EpochTimestampMsFieldNumber = 23;
+    private ulong epochTimestampMs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong Timestamp {
-      get { return timestamp_; }
+    public ulong EpochTimestampMs {
+      get { return epochTimestampMs_; }
       set {
-        timestamp_ = value;
+        epochTimestampMs_ = value;
       }
     }
 
-    /// <summary>Field number for the "request_hash" field.</summary>
-    public const int RequestHashFieldNumber = 24;
-    private static readonly pb::FieldCodec<ulong> _repeated_requestHash_codec
+    /// <summary>Field number for the "request_hashes" field.</summary>
+    public const int RequestHashesFieldNumber = 24;
+    private static readonly pb::FieldCodec<ulong> _repeated_requestHashes_codec
         = pb::FieldCodec.ForUInt64(194);
-    private readonly pbc::RepeatedField<ulong> requestHash_ = new pbc::RepeatedField<ulong>();
+    private readonly pbc::RepeatedField<ulong> requestHashes_ = new pbc::RepeatedField<ulong>();
     /// <summary>
-    ///  hashes of each request message in a hashArray signed based on the auth_token or auth_info - xxhash64
+    ///  xxHash64 of the requests being sent with this agglom
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<ulong> RequestHash {
-      get { return requestHash_; }
+    public pbc::RepeatedField<ulong> RequestHashes {
+      get { return requestHashes_; }
     }
 
-    /// <summary>Field number for the "unknown25" field.</summary>
-    public const int Unknown25FieldNumber = 25;
-    private long unknown25_;
-    /// <summary>
-    ///  for 0.33 its static -8537042734809897855 or 0x898654dd2753a481, generated via xxHash64("\"b8fa9757195897aae92c53dbcf8a60fb3d86d745\"".ToByteArray(), 0x88533787)
-    /// </summary>
+    /// <summary>Field number for the "field25" field.</summary>
+    public const int Field25FieldNumber = 25;
+    private ulong field25_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Unknown25 {
-      get { return unknown25_; }
+    public ulong Field25 {
+      get { return field25_; }
       set {
-        unknown25_ = value;
+        field25_ = value;
       }
     }
 
@@ -290,36 +451,62 @@ namespace POGOProtos.Networking.Envelopes {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TimestampSinceStart != other.TimestampSinceStart) return false;
-      if(!locationFix_.Equals(other.locationFix_)) return false;
-      if (!object.Equals(GpsInfo, other.GpsInfo)) return false;
-      if (!object.Equals(SensorInfo, other.SensorInfo)) return false;
+      if(!field1_.Equals(other.field1_)) return false;
+      if (TimestampMsSinceStart != other.TimestampMsSinceStart) return false;
+      if (Field3 != other.Field3) return false;
+      if(!locationUpdates_.Equals(other.locationUpdates_)) return false;
+      if(!androidGpsInfo_.Equals(other.androidGpsInfo_)) return false;
+      if(!field6_.Equals(other.field6_)) return false;
+      if(!sensorUpdates_.Equals(other.sensorUpdates_)) return false;
       if (!object.Equals(DeviceInfo, other.DeviceInfo)) return false;
-      if (!object.Equals(ActivityStatus, other.ActivityStatus)) return false;
-      if (LocationHash1 != other.LocationHash1) return false;
-      if (LocationHash2 != other.LocationHash2) return false;
-      if (SessionHash != other.SessionHash) return false;
-      if (Timestamp != other.Timestamp) return false;
-      if(!requestHash_.Equals(other.requestHash_)) return false;
-      if (Unknown25 != other.Unknown25) return false;
+      if (!object.Equals(IosDeviceInfo, other.IosDeviceInfo)) return false;
+      if (LocationHashByTokenSeed != other.LocationHashByTokenSeed) return false;
+      if (Field11 != other.Field11) return false;
+      if (Field12 != other.Field12) return false;
+      if (Field13 != other.Field13) return false;
+      if (Field14 != other.Field14) return false;
+      if (Field15 != other.Field15) return false;
+      if (Field16 != other.Field16) return false;
+      if (Field17 != other.Field17) return false;
+      if (Field18 != other.Field18) return false;
+      if (Field19 != other.Field19) return false;
+      if (LocationHash != other.LocationHash) return false;
+      if (Field21 != other.Field21) return false;
+      if (Field22 != other.Field22) return false;
+      if (EpochTimestampMs != other.EpochTimestampMs) return false;
+      if(!requestHashes_.Equals(other.requestHashes_)) return false;
+      if (Field25 != other.Field25) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TimestampSinceStart != 0UL) hash ^= TimestampSinceStart.GetHashCode();
-      hash ^= locationFix_.GetHashCode();
-      if (gpsInfo_ != null) hash ^= GpsInfo.GetHashCode();
-      if (sensorInfo_ != null) hash ^= SensorInfo.GetHashCode();
+      hash ^= field1_.GetHashCode();
+      if (TimestampMsSinceStart != 0L) hash ^= TimestampMsSinceStart.GetHashCode();
+      if (Field3.Length != 0) hash ^= Field3.GetHashCode();
+      hash ^= locationUpdates_.GetHashCode();
+      hash ^= androidGpsInfo_.GetHashCode();
+      hash ^= field6_.GetHashCode();
+      hash ^= sensorUpdates_.GetHashCode();
       if (deviceInfo_ != null) hash ^= DeviceInfo.GetHashCode();
-      if (activityStatus_ != null) hash ^= ActivityStatus.GetHashCode();
-      if (LocationHash1 != 0) hash ^= LocationHash1.GetHashCode();
-      if (LocationHash2 != 0) hash ^= LocationHash2.GetHashCode();
-      if (SessionHash.Length != 0) hash ^= SessionHash.GetHashCode();
-      if (Timestamp != 0UL) hash ^= Timestamp.GetHashCode();
-      hash ^= requestHash_.GetHashCode();
-      if (Unknown25 != 0L) hash ^= Unknown25.GetHashCode();
+      if (iosDeviceInfo_ != null) hash ^= IosDeviceInfo.GetHashCode();
+      if (LocationHashByTokenSeed != 0) hash ^= LocationHashByTokenSeed.GetHashCode();
+      if (Field11 != false) hash ^= Field11.GetHashCode();
+      if (Field12 != false) hash ^= Field12.GetHashCode();
+      if (Field13 != 0) hash ^= Field13.GetHashCode();
+      if (Field14 != 0) hash ^= Field14.GetHashCode();
+      if (Field15.Length != 0) hash ^= Field15.GetHashCode();
+      if (Field16 != 0) hash ^= Field16.GetHashCode();
+      if (Field17.Length != 0) hash ^= Field17.GetHashCode();
+      if (Field18.Length != 0) hash ^= Field18.GetHashCode();
+      if (Field19 != false) hash ^= Field19.GetHashCode();
+      if (LocationHash != 0) hash ^= LocationHash.GetHashCode();
+      if (Field21 != false) hash ^= Field21.GetHashCode();
+      if (Field22.Length != 0) hash ^= Field22.GetHashCode();
+      if (EpochTimestampMs != 0UL) hash ^= EpochTimestampMs.GetHashCode();
+      hash ^= requestHashes_.GetHashCode();
+      if (Field25 != 0UL) hash ^= Field25.GetHashCode();
       return hash;
     }
 
@@ -330,84 +517,155 @@ namespace POGOProtos.Networking.Envelopes {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TimestampSinceStart != 0UL) {
+      field1_.WriteTo(output, _repeated_field1_codec);
+      if (TimestampMsSinceStart != 0L) {
         output.WriteRawTag(16);
-        output.WriteUInt64(TimestampSinceStart);
+        output.WriteInt64(TimestampMsSinceStart);
       }
-      locationFix_.WriteTo(output, _repeated_locationFix_codec);
-      if (gpsInfo_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(GpsInfo);
+      if (Field3.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Field3);
       }
-      if (sensorInfo_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(SensorInfo);
-      }
+      locationUpdates_.WriteTo(output, _repeated_locationUpdates_codec);
+      androidGpsInfo_.WriteTo(output, _repeated_androidGpsInfo_codec);
+      field6_.WriteTo(output, _repeated_field6_codec);
+      sensorUpdates_.WriteTo(output, _repeated_sensorUpdates_codec);
       if (deviceInfo_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(DeviceInfo);
       }
-      if (activityStatus_ != null) {
+      if (iosDeviceInfo_ != null) {
         output.WriteRawTag(74);
-        output.WriteMessage(ActivityStatus);
+        output.WriteMessage(IosDeviceInfo);
       }
-      if (LocationHash1 != 0) {
+      if (LocationHashByTokenSeed != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(LocationHash1);
+        output.WriteInt32(LocationHashByTokenSeed);
       }
-      if (LocationHash2 != 0) {
+      if (Field11 != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(Field11);
+      }
+      if (Field12 != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(Field12);
+      }
+      if (Field13 != 0) {
+        output.WriteRawTag(104);
+        output.WriteInt32(Field13);
+      }
+      if (Field14 != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(Field14);
+      }
+      if (Field15.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Field15);
+      }
+      if (Field16 != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(Field16);
+      }
+      if (Field17.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(Field17);
+      }
+      if (Field18.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(Field18);
+      }
+      if (Field19 != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(Field19);
+      }
+      if (LocationHash != 0) {
         output.WriteRawTag(160, 1);
-        output.WriteUInt32(LocationHash2);
+        output.WriteInt32(LocationHash);
       }
-      if (SessionHash.Length != 0) {
+      if (Field21 != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(Field21);
+      }
+      if (Field22.Length != 0) {
         output.WriteRawTag(178, 1);
-        output.WriteBytes(SessionHash);
+        output.WriteBytes(Field22);
       }
-      if (Timestamp != 0UL) {
+      if (EpochTimestampMs != 0UL) {
         output.WriteRawTag(184, 1);
-        output.WriteUInt64(Timestamp);
+        output.WriteUInt64(EpochTimestampMs);
       }
-      requestHash_.WriteTo(output, _repeated_requestHash_codec);
-      if (Unknown25 != 0L) {
+      requestHashes_.WriteTo(output, _repeated_requestHashes_codec);
+      if (Field25 != 0UL) {
         output.WriteRawTag(200, 1);
-        output.WriteInt64(Unknown25);
+        output.WriteUInt64(Field25);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TimestampSinceStart != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TimestampSinceStart);
+      size += field1_.CalculateSize(_repeated_field1_codec);
+      if (TimestampMsSinceStart != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TimestampMsSinceStart);
       }
-      size += locationFix_.CalculateSize(_repeated_locationFix_codec);
-      if (gpsInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GpsInfo);
+      if (Field3.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Field3);
       }
-      if (sensorInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SensorInfo);
-      }
+      size += locationUpdates_.CalculateSize(_repeated_locationUpdates_codec);
+      size += androidGpsInfo_.CalculateSize(_repeated_androidGpsInfo_codec);
+      size += field6_.CalculateSize(_repeated_field6_codec);
+      size += sensorUpdates_.CalculateSize(_repeated_sensorUpdates_codec);
       if (deviceInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeviceInfo);
       }
-      if (activityStatus_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ActivityStatus);
+      if (iosDeviceInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IosDeviceInfo);
       }
-      if (LocationHash1 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LocationHash1);
+      if (LocationHashByTokenSeed != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LocationHashByTokenSeed);
       }
-      if (LocationHash2 != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(LocationHash2);
+      if (Field11 != false) {
+        size += 1 + 1;
       }
-      if (SessionHash.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeBytesSize(SessionHash);
+      if (Field12 != false) {
+        size += 1 + 1;
       }
-      if (Timestamp != 0UL) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(Timestamp);
+      if (Field13 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Field13);
       }
-      size += requestHash_.CalculateSize(_repeated_requestHash_codec);
-      if (Unknown25 != 0L) {
-        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Unknown25);
+      if (Field14 != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Field14);
+      }
+      if (Field15.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Field15);
+      }
+      if (Field16 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Field16);
+      }
+      if (Field17.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Field17);
+      }
+      if (Field18.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Field18);
+      }
+      if (Field19 != false) {
+        size += 2 + 1;
+      }
+      if (LocationHash != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(LocationHash);
+      }
+      if (Field21 != false) {
+        size += 2 + 1;
+      }
+      if (Field22.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeBytesSize(Field22);
+      }
+      if (EpochTimestampMs != 0UL) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(EpochTimestampMs);
+      }
+      size += requestHashes_.CalculateSize(_repeated_requestHashes_codec);
+      if (Field25 != 0UL) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt64Size(Field25);
       }
       return size;
     }
@@ -417,49 +675,74 @@ namespace POGOProtos.Networking.Envelopes {
       if (other == null) {
         return;
       }
-      if (other.TimestampSinceStart != 0UL) {
-        TimestampSinceStart = other.TimestampSinceStart;
+      field1_.Add(other.field1_);
+      if (other.TimestampMsSinceStart != 0L) {
+        TimestampMsSinceStart = other.TimestampMsSinceStart;
       }
-      locationFix_.Add(other.locationFix_);
-      if (other.gpsInfo_ != null) {
-        if (gpsInfo_ == null) {
-          gpsInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo();
-        }
-        GpsInfo.MergeFrom(other.GpsInfo);
+      if (other.Field3.Length != 0) {
+        Field3 = other.Field3;
       }
-      if (other.sensorInfo_ != null) {
-        if (sensorInfo_ == null) {
-          sensorInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo();
-        }
-        SensorInfo.MergeFrom(other.SensorInfo);
-      }
+      locationUpdates_.Add(other.locationUpdates_);
+      androidGpsInfo_.Add(other.androidGpsInfo_);
+      field6_.Add(other.field6_);
+      sensorUpdates_.Add(other.sensorUpdates_);
       if (other.deviceInfo_ != null) {
         if (deviceInfo_ == null) {
           deviceInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.DeviceInfo();
         }
         DeviceInfo.MergeFrom(other.DeviceInfo);
       }
-      if (other.activityStatus_ != null) {
-        if (activityStatus_ == null) {
-          activityStatus_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus();
+      if (other.iosDeviceInfo_ != null) {
+        if (iosDeviceInfo_ == null) {
+          iosDeviceInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.IOSDeviceInfo();
         }
-        ActivityStatus.MergeFrom(other.ActivityStatus);
+        IosDeviceInfo.MergeFrom(other.IosDeviceInfo);
       }
-      if (other.LocationHash1 != 0) {
-        LocationHash1 = other.LocationHash1;
+      if (other.LocationHashByTokenSeed != 0) {
+        LocationHashByTokenSeed = other.LocationHashByTokenSeed;
       }
-      if (other.LocationHash2 != 0) {
-        LocationHash2 = other.LocationHash2;
+      if (other.Field11 != false) {
+        Field11 = other.Field11;
       }
-      if (other.SessionHash.Length != 0) {
-        SessionHash = other.SessionHash;
+      if (other.Field12 != false) {
+        Field12 = other.Field12;
       }
-      if (other.Timestamp != 0UL) {
-        Timestamp = other.Timestamp;
+      if (other.Field13 != 0) {
+        Field13 = other.Field13;
       }
-      requestHash_.Add(other.requestHash_);
-      if (other.Unknown25 != 0L) {
-        Unknown25 = other.Unknown25;
+      if (other.Field14 != 0) {
+        Field14 = other.Field14;
+      }
+      if (other.Field15.Length != 0) {
+        Field15 = other.Field15;
+      }
+      if (other.Field16 != 0) {
+        Field16 = other.Field16;
+      }
+      if (other.Field17.Length != 0) {
+        Field17 = other.Field17;
+      }
+      if (other.Field18.Length != 0) {
+        Field18 = other.Field18;
+      }
+      if (other.Field19 != false) {
+        Field19 = other.Field19;
+      }
+      if (other.LocationHash != 0) {
+        LocationHash = other.LocationHash;
+      }
+      if (other.Field21 != false) {
+        Field21 = other.Field21;
+      }
+      if (other.Field22.Length != 0) {
+        Field22 = other.Field22;
+      }
+      if (other.EpochTimestampMs != 0UL) {
+        EpochTimestampMs = other.EpochTimestampMs;
+      }
+      requestHashes_.Add(other.requestHashes_);
+      if (other.Field25 != 0UL) {
+        Field25 = other.Field25;
       }
     }
 
@@ -471,26 +754,32 @@ namespace POGOProtos.Networking.Envelopes {
           default:
             input.SkipLastField();
             break;
+          case 10: {
+            field1_.AddEntriesFrom(input, _repeated_field1_codec);
+            break;
+          }
           case 16: {
-            TimestampSinceStart = input.ReadUInt64();
+            TimestampMsSinceStart = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            Field3 = input.ReadString();
             break;
           }
           case 34: {
-            locationFix_.AddEntriesFrom(input, _repeated_locationFix_codec);
+            locationUpdates_.AddEntriesFrom(input, _repeated_locationUpdates_codec);
             break;
           }
           case 42: {
-            if (gpsInfo_ == null) {
-              gpsInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.AndroidGpsInfo();
-            }
-            input.ReadMessage(gpsInfo_);
+            androidGpsInfo_.AddEntriesFrom(input, _repeated_androidGpsInfo_codec);
+            break;
+          }
+          case 50: {
+            field6_.AddEntriesFrom(input, _repeated_field6_codec);
             break;
           }
           case 58: {
-            if (sensorInfo_ == null) {
-              sensorInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.SensorInfo();
-            }
-            input.ReadMessage(sensorInfo_);
+            sensorUpdates_.AddEntriesFrom(input, _repeated_sensorUpdates_codec);
             break;
           }
           case 66: {
@@ -501,35 +790,75 @@ namespace POGOProtos.Networking.Envelopes {
             break;
           }
           case 74: {
-            if (activityStatus_ == null) {
-              activityStatus_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.ActivityStatus();
+            if (iosDeviceInfo_ == null) {
+              iosDeviceInfo_ = new global::POGOProtos.Networking.Envelopes.Signature.Types.IOSDeviceInfo();
             }
-            input.ReadMessage(activityStatus_);
+            input.ReadMessage(iosDeviceInfo_);
             break;
           }
           case 80: {
-            LocationHash1 = input.ReadUInt32();
+            LocationHashByTokenSeed = input.ReadInt32();
+            break;
+          }
+          case 88: {
+            Field11 = input.ReadBool();
+            break;
+          }
+          case 96: {
+            Field12 = input.ReadBool();
+            break;
+          }
+          case 104: {
+            Field13 = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            Field14 = input.ReadInt32();
+            break;
+          }
+          case 122: {
+            Field15 = input.ReadString();
+            break;
+          }
+          case 128: {
+            Field16 = input.ReadInt32();
+            break;
+          }
+          case 138: {
+            Field17 = input.ReadString();
+            break;
+          }
+          case 146: {
+            Field18 = input.ReadString();
+            break;
+          }
+          case 152: {
+            Field19 = input.ReadBool();
             break;
           }
           case 160: {
-            LocationHash2 = input.ReadUInt32();
+            LocationHash = input.ReadInt32();
+            break;
+          }
+          case 168: {
+            Field21 = input.ReadBool();
             break;
           }
           case 178: {
-            SessionHash = input.ReadBytes();
+            Field22 = input.ReadBytes();
             break;
           }
           case 184: {
-            Timestamp = input.ReadUInt64();
+            EpochTimestampMs = input.ReadUInt64();
             break;
           }
           case 194:
           case 192: {
-            requestHash_.AddEntriesFrom(input, _repeated_requestHash_codec);
+            requestHashes_.AddEntriesFrom(input, _repeated_requestHashes_codec);
             break;
           }
           case 200: {
-            Unknown25 = input.ReadInt64();
+            Field25 = input.ReadUInt64();
             break;
           }
         }
@@ -540,10 +869,13 @@ namespace POGOProtos.Networking.Envelopes {
     /// <summary>Container for nested types declared in the Signature message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class LocationFix : pb::IMessage<LocationFix> {
-        private static readonly pb::MessageParser<LocationFix> _parser = new pb::MessageParser<LocationFix>(() => new LocationFix());
+      /// <summary>
+      ///  100% - Reference iOS lib "LocationUpdate" structure for bridge
+      /// </summary>
+      public sealed partial class LocationUpdate : pb::IMessage<LocationUpdate> {
+        private static readonly pb::MessageParser<LocationUpdate> _parser = new pb::MessageParser<LocationUpdate>(() => new LocationUpdate());
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<LocationFix> Parser { get { return _parser; } }
+        public static pb::MessageParser<LocationUpdate> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
@@ -556,21 +888,21 @@ namespace POGOProtos.Networking.Envelopes {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public LocationFix() {
+        public LocationUpdate() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public LocationFix(LocationFix other) : this() {
-          provider_ = other.provider_;
-          timestampSnapshot_ = other.timestampSnapshot_;
+        public LocationUpdate(LocationUpdate other) : this() {
+          name_ = other.name_;
+          timestampMs_ = other.timestampMs_;
           altitude_ = other.altitude_;
           latitude_ = other.latitude_;
           longitude_ = other.longitude_;
-          speed_ = other.speed_;
-          course_ = other.course_;
+          deviceSpeed_ = other.deviceSpeed_;
+          deviceCourse_ = other.deviceCourse_;
           horizontalAccuracy_ = other.horizontalAccuracy_;
           verticalAccuracy_ = other.verticalAccuracy_;
           providerStatus_ = other.providerStatus_;
@@ -579,44 +911,38 @@ namespace POGOProtos.Networking.Envelopes {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public LocationFix Clone() {
-          return new LocationFix(this);
+        public LocationUpdate Clone() {
+          return new LocationUpdate(this);
         }
 
-        /// <summary>Field number for the "provider" field.</summary>
-        public const int ProviderFieldNumber = 1;
-        private string provider_ = "";
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
         /// <summary>
-        ///  "network", "gps", "fused", possibly others
+        ///  "network", "gps", "fused" - only these 3 values (com.nianticlabs.location.NianticLocationManager.class)
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Provider {
-          get { return provider_; }
+        public string Name {
+          get { return name_; }
           set {
-            provider_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
-        /// <summary>Field number for the "timestamp_snapshot" field.</summary>
-        public const int TimestampSnapshotFieldNumber = 2;
-        private ulong timestampSnapshot_;
-        /// <summary>
-        ///  in ms since start
-        /// </summary>
+        /// <summary>Field number for the "timestamp_ms" field.</summary>
+        public const int TimestampMsFieldNumber = 2;
+        private long timestampMs_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ulong TimestampSnapshot {
-          get { return timestampSnapshot_; }
+        public long TimestampMs {
+          get { return timestampMs_; }
           set {
-            timestampSnapshot_ = value;
+            timestampMs_ = value;
           }
         }
 
         /// <summary>Field number for the "altitude" field.</summary>
         public const int AltitudeFieldNumber = 4;
         private float altitude_;
-        /// <summary>
-        ///  Confirmed on android/ios
-        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float Altitude {
           get { return altitude_; }
@@ -647,40 +973,31 @@ namespace POGOProtos.Networking.Envelopes {
           }
         }
 
-        /// <summary>Field number for the "speed" field.</summary>
-        public const int SpeedFieldNumber = 18;
-        private float speed_;
-        /// <summary>
-        ///  iOS only (-1 for no reading available, speed in m/s)
-        /// </summary>
+        /// <summary>Field number for the "device_speed" field.</summary>
+        public const int DeviceSpeedFieldNumber = 18;
+        private float deviceSpeed_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public float Speed {
-          get { return speed_; }
+        public float DeviceSpeed {
+          get { return deviceSpeed_; }
           set {
-            speed_ = value;
+            deviceSpeed_ = value;
           }
         }
 
-        /// <summary>Field number for the "course" field.</summary>
-        public const int CourseFieldNumber = 20;
-        private float course_;
-        /// <summary>
-        ///  iOS only (range seems to be -1 for not reading, and 0 to 360 for reading) confirmed by @marcel
-        /// </summary>
+        /// <summary>Field number for the "device_course" field.</summary>
+        public const int DeviceCourseFieldNumber = 20;
+        private float deviceCourse_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public float Course {
-          get { return course_; }
+        public float DeviceCourse {
+          get { return deviceCourse_; }
           set {
-            course_ = value;
+            deviceCourse_ = value;
           }
         }
 
         /// <summary>Field number for the "horizontal_accuracy" field.</summary>
         public const int HorizontalAccuracyFieldNumber = 21;
         private float horizontalAccuracy_;
-        /// <summary>
-        ///  in meters, both on Android and iOS
-        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float HorizontalAccuracy {
           get { return horizontalAccuracy_; }
@@ -692,9 +1009,6 @@ namespace POGOProtos.Networking.Envelopes {
         /// <summary>Field number for the "vertical_accuracy" field.</summary>
         public const int VerticalAccuracyFieldNumber = 22;
         private float verticalAccuracy_;
-        /// <summary>
-        ///  iOS only
-        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float VerticalAccuracy {
           get { return verticalAccuracy_; }
@@ -705,12 +1019,9 @@ namespace POGOProtos.Networking.Envelopes {
 
         /// <summary>Field number for the "provider_status" field.</summary>
         public const int ProviderStatusFieldNumber = 26;
-        private ulong providerStatus_;
-        /// <summary>
-        ///  Usually 3 (possibly GPS status: 1 = no fix, 2 = acquiring/inaccurate, 3 = fix acquired)
-        /// </summary>
+        private int providerStatus_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ulong ProviderStatus {
+        public int ProviderStatus {
           get { return providerStatus_; }
           set {
             providerStatus_ = value;
@@ -719,12 +1030,9 @@ namespace POGOProtos.Networking.Envelopes {
 
         /// <summary>Field number for the "floor" field.</summary>
         public const int FloorFieldNumber = 27;
-        private uint floor_;
-        /// <summary>
-        ///  On iOS there are some LocationFixes with unk26=1 and everything else empty
-        /// </summary>
+        private long floor_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public uint Floor {
+        public long Floor {
           get { return floor_; }
           set {
             floor_ = value;
@@ -733,12 +1041,9 @@ namespace POGOProtos.Networking.Envelopes {
 
         /// <summary>Field number for the "location_type" field.</summary>
         public const int LocationTypeFieldNumber = 28;
-        private ulong locationType_;
-        /// <summary>
-        ///  Always 1 (if there is data at all)
-        /// </summary>
+        private int locationType_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ulong LocationType {
+        public int LocationType {
           get { return locationType_; }
           set {
             locationType_ = value;
@@ -747,24 +1052,24 @@ namespace POGOProtos.Networking.Envelopes {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as LocationFix);
+          return Equals(other as LocationUpdate);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(LocationFix other) {
+        public bool Equals(LocationUpdate other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (Provider != other.Provider) return false;
-          if (TimestampSnapshot != other.TimestampSnapshot) return false;
+          if (Name != other.Name) return false;
+          if (TimestampMs != other.TimestampMs) return false;
           if (Altitude != other.Altitude) return false;
           if (Latitude != other.Latitude) return false;
           if (Longitude != other.Longitude) return false;
-          if (Speed != other.Speed) return false;
-          if (Course != other.Course) return false;
+          if (DeviceSpeed != other.DeviceSpeed) return false;
+          if (DeviceCourse != other.DeviceCourse) return false;
           if (HorizontalAccuracy != other.HorizontalAccuracy) return false;
           if (VerticalAccuracy != other.VerticalAccuracy) return false;
           if (ProviderStatus != other.ProviderStatus) return false;
@@ -776,18 +1081,18 @@ namespace POGOProtos.Networking.Envelopes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Provider.Length != 0) hash ^= Provider.GetHashCode();
-          if (TimestampSnapshot != 0UL) hash ^= TimestampSnapshot.GetHashCode();
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (TimestampMs != 0L) hash ^= TimestampMs.GetHashCode();
           if (Altitude != 0F) hash ^= Altitude.GetHashCode();
           if (Latitude != 0F) hash ^= Latitude.GetHashCode();
           if (Longitude != 0F) hash ^= Longitude.GetHashCode();
-          if (Speed != 0F) hash ^= Speed.GetHashCode();
-          if (Course != 0F) hash ^= Course.GetHashCode();
+          if (DeviceSpeed != 0F) hash ^= DeviceSpeed.GetHashCode();
+          if (DeviceCourse != 0F) hash ^= DeviceCourse.GetHashCode();
           if (HorizontalAccuracy != 0F) hash ^= HorizontalAccuracy.GetHashCode();
           if (VerticalAccuracy != 0F) hash ^= VerticalAccuracy.GetHashCode();
-          if (ProviderStatus != 0UL) hash ^= ProviderStatus.GetHashCode();
-          if (Floor != 0) hash ^= Floor.GetHashCode();
-          if (LocationType != 0UL) hash ^= LocationType.GetHashCode();
+          if (ProviderStatus != 0) hash ^= ProviderStatus.GetHashCode();
+          if (Floor != 0L) hash ^= Floor.GetHashCode();
+          if (LocationType != 0) hash ^= LocationType.GetHashCode();
           return hash;
         }
 
@@ -798,13 +1103,13 @@ namespace POGOProtos.Networking.Envelopes {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Provider.Length != 0) {
+          if (Name.Length != 0) {
             output.WriteRawTag(10);
-            output.WriteString(Provider);
+            output.WriteString(Name);
           }
-          if (TimestampSnapshot != 0UL) {
+          if (TimestampMs != 0L) {
             output.WriteRawTag(16);
-            output.WriteUInt64(TimestampSnapshot);
+            output.WriteInt64(TimestampMs);
           }
           if (Altitude != 0F) {
             output.WriteRawTag(37);
@@ -818,13 +1123,13 @@ namespace POGOProtos.Networking.Envelopes {
             output.WriteRawTag(117);
             output.WriteFloat(Longitude);
           }
-          if (Speed != 0F) {
+          if (DeviceSpeed != 0F) {
             output.WriteRawTag(149, 1);
-            output.WriteFloat(Speed);
+            output.WriteFloat(DeviceSpeed);
           }
-          if (Course != 0F) {
+          if (DeviceCourse != 0F) {
             output.WriteRawTag(165, 1);
-            output.WriteFloat(Course);
+            output.WriteFloat(DeviceCourse);
           }
           if (HorizontalAccuracy != 0F) {
             output.WriteRawTag(173, 1);
@@ -834,28 +1139,28 @@ namespace POGOProtos.Networking.Envelopes {
             output.WriteRawTag(181, 1);
             output.WriteFloat(VerticalAccuracy);
           }
-          if (ProviderStatus != 0UL) {
+          if (ProviderStatus != 0) {
             output.WriteRawTag(208, 1);
-            output.WriteUInt64(ProviderStatus);
+            output.WriteInt32(ProviderStatus);
           }
-          if (Floor != 0) {
+          if (Floor != 0L) {
             output.WriteRawTag(216, 1);
-            output.WriteUInt32(Floor);
+            output.WriteInt64(Floor);
           }
-          if (LocationType != 0UL) {
+          if (LocationType != 0) {
             output.WriteRawTag(224, 1);
-            output.WriteUInt64(LocationType);
+            output.WriteInt32(LocationType);
           }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Provider.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Provider);
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
-          if (TimestampSnapshot != 0UL) {
-            size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TimestampSnapshot);
+          if (TimestampMs != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(TimestampMs);
           }
           if (Altitude != 0F) {
             size += 1 + 4;
@@ -866,10 +1171,10 @@ namespace POGOProtos.Networking.Envelopes {
           if (Longitude != 0F) {
             size += 1 + 4;
           }
-          if (Speed != 0F) {
+          if (DeviceSpeed != 0F) {
             size += 2 + 4;
           }
-          if (Course != 0F) {
+          if (DeviceCourse != 0F) {
             size += 2 + 4;
           }
           if (HorizontalAccuracy != 0F) {
@@ -878,28 +1183,28 @@ namespace POGOProtos.Networking.Envelopes {
           if (VerticalAccuracy != 0F) {
             size += 2 + 4;
           }
-          if (ProviderStatus != 0UL) {
-            size += 2 + pb::CodedOutputStream.ComputeUInt64Size(ProviderStatus);
+          if (ProviderStatus != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeInt32Size(ProviderStatus);
           }
-          if (Floor != 0) {
-            size += 2 + pb::CodedOutputStream.ComputeUInt32Size(Floor);
+          if (Floor != 0L) {
+            size += 2 + pb::CodedOutputStream.ComputeInt64Size(Floor);
           }
-          if (LocationType != 0UL) {
-            size += 2 + pb::CodedOutputStream.ComputeUInt64Size(LocationType);
+          if (LocationType != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeInt32Size(LocationType);
           }
           return size;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(LocationFix other) {
+        public void MergeFrom(LocationUpdate other) {
           if (other == null) {
             return;
           }
-          if (other.Provider.Length != 0) {
-            Provider = other.Provider;
+          if (other.Name.Length != 0) {
+            Name = other.Name;
           }
-          if (other.TimestampSnapshot != 0UL) {
-            TimestampSnapshot = other.TimestampSnapshot;
+          if (other.TimestampMs != 0L) {
+            TimestampMs = other.TimestampMs;
           }
           if (other.Altitude != 0F) {
             Altitude = other.Altitude;
@@ -910,11 +1215,11 @@ namespace POGOProtos.Networking.Envelopes {
           if (other.Longitude != 0F) {
             Longitude = other.Longitude;
           }
-          if (other.Speed != 0F) {
-            Speed = other.Speed;
+          if (other.DeviceSpeed != 0F) {
+            DeviceSpeed = other.DeviceSpeed;
           }
-          if (other.Course != 0F) {
-            Course = other.Course;
+          if (other.DeviceCourse != 0F) {
+            DeviceCourse = other.DeviceCourse;
           }
           if (other.HorizontalAccuracy != 0F) {
             HorizontalAccuracy = other.HorizontalAccuracy;
@@ -922,13 +1227,13 @@ namespace POGOProtos.Networking.Envelopes {
           if (other.VerticalAccuracy != 0F) {
             VerticalAccuracy = other.VerticalAccuracy;
           }
-          if (other.ProviderStatus != 0UL) {
+          if (other.ProviderStatus != 0) {
             ProviderStatus = other.ProviderStatus;
           }
-          if (other.Floor != 0) {
+          if (other.Floor != 0L) {
             Floor = other.Floor;
           }
-          if (other.LocationType != 0UL) {
+          if (other.LocationType != 0) {
             LocationType = other.LocationType;
           }
         }
@@ -942,11 +1247,11 @@ namespace POGOProtos.Networking.Envelopes {
                 input.SkipLastField();
                 break;
               case 10: {
-                Provider = input.ReadString();
+                Name = input.ReadString();
                 break;
               }
               case 16: {
-                TimestampSnapshot = input.ReadUInt64();
+                TimestampMs = input.ReadInt64();
                 break;
               }
               case 37: {
@@ -962,11 +1267,11 @@ namespace POGOProtos.Networking.Envelopes {
                 break;
               }
               case 149: {
-                Speed = input.ReadFloat();
+                DeviceSpeed = input.ReadFloat();
                 break;
               }
               case 165: {
-                Course = input.ReadFloat();
+                DeviceCourse = input.ReadFloat();
                 break;
               }
               case 173: {
@@ -978,15 +1283,15 @@ namespace POGOProtos.Networking.Envelopes {
                 break;
               }
               case 208: {
-                ProviderStatus = input.ReadUInt64();
+                ProviderStatus = input.ReadInt32();
                 break;
               }
               case 216: {
-                Floor = input.ReadUInt32();
+                Floor = input.ReadInt64();
                 break;
               }
               case 224: {
-                LocationType = input.ReadUInt64();
+                LocationType = input.ReadInt32();
                 break;
               }
             }
@@ -996,8 +1301,1465 @@ namespace POGOProtos.Networking.Envelopes {
       }
 
       /// <summary>
-      ///  don't really care about this since we're not using it
+      ///  iOS only
       /// </summary>
+      public sealed partial class IOSDeviceInfo : pb::IMessage<IOSDeviceInfo> {
+        private static readonly pb::MessageParser<IOSDeviceInfo> _parser = new pb::MessageParser<IOSDeviceInfo>(() => new IOSDeviceInfo());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<IOSDeviceInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IOSDeviceInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IOSDeviceInfo(IOSDeviceInfo other) : this() {
+          bool1_ = other.bool1_;
+          bool2_ = other.bool2_;
+          bool3_ = other.bool3_;
+          bool4_ = other.bool4_;
+          bool5_ = other.bool5_;
+          bool6_ = other.bool6_;
+          bool7_ = other.bool7_;
+          bool8_ = other.bool8_;
+          bool9_ = other.bool9_;
+          bool10_ = other.bool10_;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public IOSDeviceInfo Clone() {
+          return new IOSDeviceInfo(this);
+        }
+
+        /// <summary>Field number for the "bool1" field.</summary>
+        public const int Bool1FieldNumber = 1;
+        private bool bool1_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Bool1 {
+          get { return bool1_; }
+          set {
+            bool1_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bool2" field.</summary>
+        public const int Bool2FieldNumber = 2;
+        private bool bool2_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Bool2 {
+          get { return bool2_; }
+          set {
+            bool2_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bool3" field.</summary>
+        public const int Bool3FieldNumber = 3;
+        private bool bool3_;
+        /// <summary>
+        ///  1
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Bool3 {
+          get { return bool3_; }
+          set {
+            bool3_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bool4" field.</summary>
+        public const int Bool4FieldNumber = 4;
+        private bool bool4_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Bool4 {
+          get { return bool4_; }
+          set {
+            bool4_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bool5" field.</summary>
+        public const int Bool5FieldNumber = 5;
+        private bool bool5_;
+        /// <summary>
+        ///  1
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Bool5 {
+          get { return bool5_; }
+          set {
+            bool5_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bool6" field.</summary>
+        public const int Bool6FieldNumber = 6;
+        private bool bool6_;
+        /// <summary>
+        ///  1
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Bool6 {
+          get { return bool6_; }
+          set {
+            bool6_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bool7" field.</summary>
+        public const int Bool7FieldNumber = 7;
+        private bool bool7_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Bool7 {
+          get { return bool7_; }
+          set {
+            bool7_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bool8" field.</summary>
+        public const int Bool8FieldNumber = 8;
+        private bool bool8_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Bool8 {
+          get { return bool8_; }
+          set {
+            bool8_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bool9" field.</summary>
+        public const int Bool9FieldNumber = 9;
+        private bool bool9_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Bool9 {
+          get { return bool9_; }
+          set {
+            bool9_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "bool10" field.</summary>
+        public const int Bool10FieldNumber = 10;
+        private bool bool10_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Bool10 {
+          get { return bool10_; }
+          set {
+            bool10_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as IOSDeviceInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(IOSDeviceInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Bool1 != other.Bool1) return false;
+          if (Bool2 != other.Bool2) return false;
+          if (Bool3 != other.Bool3) return false;
+          if (Bool4 != other.Bool4) return false;
+          if (Bool5 != other.Bool5) return false;
+          if (Bool6 != other.Bool6) return false;
+          if (Bool7 != other.Bool7) return false;
+          if (Bool8 != other.Bool8) return false;
+          if (Bool9 != other.Bool9) return false;
+          if (Bool10 != other.Bool10) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Bool1 != false) hash ^= Bool1.GetHashCode();
+          if (Bool2 != false) hash ^= Bool2.GetHashCode();
+          if (Bool3 != false) hash ^= Bool3.GetHashCode();
+          if (Bool4 != false) hash ^= Bool4.GetHashCode();
+          if (Bool5 != false) hash ^= Bool5.GetHashCode();
+          if (Bool6 != false) hash ^= Bool6.GetHashCode();
+          if (Bool7 != false) hash ^= Bool7.GetHashCode();
+          if (Bool8 != false) hash ^= Bool8.GetHashCode();
+          if (Bool9 != false) hash ^= Bool9.GetHashCode();
+          if (Bool10 != false) hash ^= Bool10.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Bool1 != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(Bool1);
+          }
+          if (Bool2 != false) {
+            output.WriteRawTag(16);
+            output.WriteBool(Bool2);
+          }
+          if (Bool3 != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(Bool3);
+          }
+          if (Bool4 != false) {
+            output.WriteRawTag(32);
+            output.WriteBool(Bool4);
+          }
+          if (Bool5 != false) {
+            output.WriteRawTag(40);
+            output.WriteBool(Bool5);
+          }
+          if (Bool6 != false) {
+            output.WriteRawTag(48);
+            output.WriteBool(Bool6);
+          }
+          if (Bool7 != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(Bool7);
+          }
+          if (Bool8 != false) {
+            output.WriteRawTag(64);
+            output.WriteBool(Bool8);
+          }
+          if (Bool9 != false) {
+            output.WriteRawTag(72);
+            output.WriteBool(Bool9);
+          }
+          if (Bool10 != false) {
+            output.WriteRawTag(80);
+            output.WriteBool(Bool10);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Bool1 != false) {
+            size += 1 + 1;
+          }
+          if (Bool2 != false) {
+            size += 1 + 1;
+          }
+          if (Bool3 != false) {
+            size += 1 + 1;
+          }
+          if (Bool4 != false) {
+            size += 1 + 1;
+          }
+          if (Bool5 != false) {
+            size += 1 + 1;
+          }
+          if (Bool6 != false) {
+            size += 1 + 1;
+          }
+          if (Bool7 != false) {
+            size += 1 + 1;
+          }
+          if (Bool8 != false) {
+            size += 1 + 1;
+          }
+          if (Bool9 != false) {
+            size += 1 + 1;
+          }
+          if (Bool10 != false) {
+            size += 1 + 1;
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(IOSDeviceInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Bool1 != false) {
+            Bool1 = other.Bool1;
+          }
+          if (other.Bool2 != false) {
+            Bool2 = other.Bool2;
+          }
+          if (other.Bool3 != false) {
+            Bool3 = other.Bool3;
+          }
+          if (other.Bool4 != false) {
+            Bool4 = other.Bool4;
+          }
+          if (other.Bool5 != false) {
+            Bool5 = other.Bool5;
+          }
+          if (other.Bool6 != false) {
+            Bool6 = other.Bool6;
+          }
+          if (other.Bool7 != false) {
+            Bool7 = other.Bool7;
+          }
+          if (other.Bool8 != false) {
+            Bool8 = other.Bool8;
+          }
+          if (other.Bool9 != false) {
+            Bool9 = other.Bool9;
+          }
+          if (other.Bool10 != false) {
+            Bool10 = other.Bool10;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 8: {
+                Bool1 = input.ReadBool();
+                break;
+              }
+              case 16: {
+                Bool2 = input.ReadBool();
+                break;
+              }
+              case 24: {
+                Bool3 = input.ReadBool();
+                break;
+              }
+              case 32: {
+                Bool4 = input.ReadBool();
+                break;
+              }
+              case 40: {
+                Bool5 = input.ReadBool();
+                break;
+              }
+              case 48: {
+                Bool6 = input.ReadBool();
+                break;
+              }
+              case 56: {
+                Bool7 = input.ReadBool();
+                break;
+              }
+              case 64: {
+                Bool8 = input.ReadBool();
+                break;
+              }
+              case 72: {
+                Bool9 = input.ReadBool();
+                break;
+              }
+              case 80: {
+                Bool10 = input.ReadBool();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      /// <summary>
+      ///  100% - Reference iOS lib "LocationUpdate" structure for bridge
+      /// </summary>
+      public sealed partial class SensorUpdate : pb::IMessage<SensorUpdate> {
+        private static readonly pb::MessageParser<SensorUpdate> _parser = new pb::MessageParser<SensorUpdate>(() => new SensorUpdate());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<SensorUpdate> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SensorUpdate() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SensorUpdate(SensorUpdate other) : this() {
+          timestamp_ = other.timestamp_;
+          accelerationX_ = other.accelerationX_;
+          accelerationY_ = other.accelerationY_;
+          accelerationZ_ = other.accelerationZ_;
+          magneticFieldX_ = other.magneticFieldX_;
+          magneticFieldY_ = other.magneticFieldY_;
+          magneticFieldZ_ = other.magneticFieldZ_;
+          magneticFieldAccuracy_ = other.magneticFieldAccuracy_;
+          attitudePitch_ = other.attitudePitch_;
+          attitudeYaw_ = other.attitudeYaw_;
+          attitudeRoll_ = other.attitudeRoll_;
+          rotationRateX_ = other.rotationRateX_;
+          rotationRateY_ = other.rotationRateY_;
+          rotationRateZ_ = other.rotationRateZ_;
+          gravityX_ = other.gravityX_;
+          gravityY_ = other.gravityY_;
+          gravityZ_ = other.gravityZ_;
+          status_ = other.status_;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public SensorUpdate Clone() {
+          return new SensorUpdate(this);
+        }
+
+        /// <summary>Field number for the "timestamp" field.</summary>
+        public const int TimestampFieldNumber = 1;
+        private ulong timestamp_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ulong Timestamp {
+          get { return timestamp_; }
+          set {
+            timestamp_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "acceleration_x" field.</summary>
+        public const int AccelerationXFieldNumber = 3;
+        private double accelerationX_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double AccelerationX {
+          get { return accelerationX_; }
+          set {
+            accelerationX_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "acceleration_y" field.</summary>
+        public const int AccelerationYFieldNumber = 4;
+        private double accelerationY_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double AccelerationY {
+          get { return accelerationY_; }
+          set {
+            accelerationY_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "acceleration_z" field.</summary>
+        public const int AccelerationZFieldNumber = 5;
+        private double accelerationZ_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double AccelerationZ {
+          get { return accelerationZ_; }
+          set {
+            accelerationZ_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "magnetic_field_x" field.</summary>
+        public const int MagneticFieldXFieldNumber = 6;
+        private double magneticFieldX_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double MagneticFieldX {
+          get { return magneticFieldX_; }
+          set {
+            magneticFieldX_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "magnetic_field_y" field.</summary>
+        public const int MagneticFieldYFieldNumber = 7;
+        private double magneticFieldY_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double MagneticFieldY {
+          get { return magneticFieldY_; }
+          set {
+            magneticFieldY_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "magnetic_field_z" field.</summary>
+        public const int MagneticFieldZFieldNumber = 8;
+        private double magneticFieldZ_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double MagneticFieldZ {
+          get { return magneticFieldZ_; }
+          set {
+            magneticFieldZ_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "magnetic_field_accuracy" field.</summary>
+        public const int MagneticFieldAccuracyFieldNumber = 9;
+        private int magneticFieldAccuracy_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int MagneticFieldAccuracy {
+          get { return magneticFieldAccuracy_; }
+          set {
+            magneticFieldAccuracy_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "attitude_pitch" field.</summary>
+        public const int AttitudePitchFieldNumber = 10;
+        private double attitudePitch_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double AttitudePitch {
+          get { return attitudePitch_; }
+          set {
+            attitudePitch_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "attitude_yaw" field.</summary>
+        public const int AttitudeYawFieldNumber = 11;
+        private double attitudeYaw_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double AttitudeYaw {
+          get { return attitudeYaw_; }
+          set {
+            attitudeYaw_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "attitude_roll" field.</summary>
+        public const int AttitudeRollFieldNumber = 12;
+        private double attitudeRoll_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double AttitudeRoll {
+          get { return attitudeRoll_; }
+          set {
+            attitudeRoll_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "rotation_rate_x" field.</summary>
+        public const int RotationRateXFieldNumber = 13;
+        private double rotationRateX_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double RotationRateX {
+          get { return rotationRateX_; }
+          set {
+            rotationRateX_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "rotation_rate_y" field.</summary>
+        public const int RotationRateYFieldNumber = 14;
+        private double rotationRateY_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double RotationRateY {
+          get { return rotationRateY_; }
+          set {
+            rotationRateY_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "rotation_rate_z" field.</summary>
+        public const int RotationRateZFieldNumber = 15;
+        private double rotationRateZ_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double RotationRateZ {
+          get { return rotationRateZ_; }
+          set {
+            rotationRateZ_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "gravity_x" field.</summary>
+        public const int GravityXFieldNumber = 16;
+        private double gravityX_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double GravityX {
+          get { return gravityX_; }
+          set {
+            gravityX_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "gravity_y" field.</summary>
+        public const int GravityYFieldNumber = 17;
+        private double gravityY_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double GravityY {
+          get { return gravityY_; }
+          set {
+            gravityY_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "gravity_z" field.</summary>
+        public const int GravityZFieldNumber = 18;
+        private double gravityZ_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public double GravityZ {
+          get { return gravityZ_; }
+          set {
+            gravityZ_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "status" field.</summary>
+        public const int StatusFieldNumber = 19;
+        private int status_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int Status {
+          get { return status_; }
+          set {
+            status_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as SensorUpdate);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(SensorUpdate other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Timestamp != other.Timestamp) return false;
+          if (AccelerationX != other.AccelerationX) return false;
+          if (AccelerationY != other.AccelerationY) return false;
+          if (AccelerationZ != other.AccelerationZ) return false;
+          if (MagneticFieldX != other.MagneticFieldX) return false;
+          if (MagneticFieldY != other.MagneticFieldY) return false;
+          if (MagneticFieldZ != other.MagneticFieldZ) return false;
+          if (MagneticFieldAccuracy != other.MagneticFieldAccuracy) return false;
+          if (AttitudePitch != other.AttitudePitch) return false;
+          if (AttitudeYaw != other.AttitudeYaw) return false;
+          if (AttitudeRoll != other.AttitudeRoll) return false;
+          if (RotationRateX != other.RotationRateX) return false;
+          if (RotationRateY != other.RotationRateY) return false;
+          if (RotationRateZ != other.RotationRateZ) return false;
+          if (GravityX != other.GravityX) return false;
+          if (GravityY != other.GravityY) return false;
+          if (GravityZ != other.GravityZ) return false;
+          if (Status != other.Status) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Timestamp != 0UL) hash ^= Timestamp.GetHashCode();
+          if (AccelerationX != 0D) hash ^= AccelerationX.GetHashCode();
+          if (AccelerationY != 0D) hash ^= AccelerationY.GetHashCode();
+          if (AccelerationZ != 0D) hash ^= AccelerationZ.GetHashCode();
+          if (MagneticFieldX != 0D) hash ^= MagneticFieldX.GetHashCode();
+          if (MagneticFieldY != 0D) hash ^= MagneticFieldY.GetHashCode();
+          if (MagneticFieldZ != 0D) hash ^= MagneticFieldZ.GetHashCode();
+          if (MagneticFieldAccuracy != 0) hash ^= MagneticFieldAccuracy.GetHashCode();
+          if (AttitudePitch != 0D) hash ^= AttitudePitch.GetHashCode();
+          if (AttitudeYaw != 0D) hash ^= AttitudeYaw.GetHashCode();
+          if (AttitudeRoll != 0D) hash ^= AttitudeRoll.GetHashCode();
+          if (RotationRateX != 0D) hash ^= RotationRateX.GetHashCode();
+          if (RotationRateY != 0D) hash ^= RotationRateY.GetHashCode();
+          if (RotationRateZ != 0D) hash ^= RotationRateZ.GetHashCode();
+          if (GravityX != 0D) hash ^= GravityX.GetHashCode();
+          if (GravityY != 0D) hash ^= GravityY.GetHashCode();
+          if (GravityZ != 0D) hash ^= GravityZ.GetHashCode();
+          if (Status != 0) hash ^= Status.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Timestamp != 0UL) {
+            output.WriteRawTag(8);
+            output.WriteUInt64(Timestamp);
+          }
+          if (AccelerationX != 0D) {
+            output.WriteRawTag(25);
+            output.WriteDouble(AccelerationX);
+          }
+          if (AccelerationY != 0D) {
+            output.WriteRawTag(33);
+            output.WriteDouble(AccelerationY);
+          }
+          if (AccelerationZ != 0D) {
+            output.WriteRawTag(41);
+            output.WriteDouble(AccelerationZ);
+          }
+          if (MagneticFieldX != 0D) {
+            output.WriteRawTag(49);
+            output.WriteDouble(MagneticFieldX);
+          }
+          if (MagneticFieldY != 0D) {
+            output.WriteRawTag(57);
+            output.WriteDouble(MagneticFieldY);
+          }
+          if (MagneticFieldZ != 0D) {
+            output.WriteRawTag(65);
+            output.WriteDouble(MagneticFieldZ);
+          }
+          if (MagneticFieldAccuracy != 0) {
+            output.WriteRawTag(72);
+            output.WriteInt32(MagneticFieldAccuracy);
+          }
+          if (AttitudePitch != 0D) {
+            output.WriteRawTag(81);
+            output.WriteDouble(AttitudePitch);
+          }
+          if (AttitudeYaw != 0D) {
+            output.WriteRawTag(89);
+            output.WriteDouble(AttitudeYaw);
+          }
+          if (AttitudeRoll != 0D) {
+            output.WriteRawTag(97);
+            output.WriteDouble(AttitudeRoll);
+          }
+          if (RotationRateX != 0D) {
+            output.WriteRawTag(105);
+            output.WriteDouble(RotationRateX);
+          }
+          if (RotationRateY != 0D) {
+            output.WriteRawTag(113);
+            output.WriteDouble(RotationRateY);
+          }
+          if (RotationRateZ != 0D) {
+            output.WriteRawTag(121);
+            output.WriteDouble(RotationRateZ);
+          }
+          if (GravityX != 0D) {
+            output.WriteRawTag(129, 1);
+            output.WriteDouble(GravityX);
+          }
+          if (GravityY != 0D) {
+            output.WriteRawTag(137, 1);
+            output.WriteDouble(GravityY);
+          }
+          if (GravityZ != 0D) {
+            output.WriteRawTag(145, 1);
+            output.WriteDouble(GravityZ);
+          }
+          if (Status != 0) {
+            output.WriteRawTag(152, 1);
+            output.WriteInt32(Status);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Timestamp != 0UL) {
+            size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Timestamp);
+          }
+          if (AccelerationX != 0D) {
+            size += 1 + 8;
+          }
+          if (AccelerationY != 0D) {
+            size += 1 + 8;
+          }
+          if (AccelerationZ != 0D) {
+            size += 1 + 8;
+          }
+          if (MagneticFieldX != 0D) {
+            size += 1 + 8;
+          }
+          if (MagneticFieldY != 0D) {
+            size += 1 + 8;
+          }
+          if (MagneticFieldZ != 0D) {
+            size += 1 + 8;
+          }
+          if (MagneticFieldAccuracy != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MagneticFieldAccuracy);
+          }
+          if (AttitudePitch != 0D) {
+            size += 1 + 8;
+          }
+          if (AttitudeYaw != 0D) {
+            size += 1 + 8;
+          }
+          if (AttitudeRoll != 0D) {
+            size += 1 + 8;
+          }
+          if (RotationRateX != 0D) {
+            size += 1 + 8;
+          }
+          if (RotationRateY != 0D) {
+            size += 1 + 8;
+          }
+          if (RotationRateZ != 0D) {
+            size += 1 + 8;
+          }
+          if (GravityX != 0D) {
+            size += 2 + 8;
+          }
+          if (GravityY != 0D) {
+            size += 2 + 8;
+          }
+          if (GravityZ != 0D) {
+            size += 2 + 8;
+          }
+          if (Status != 0) {
+            size += 2 + pb::CodedOutputStream.ComputeInt32Size(Status);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(SensorUpdate other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Timestamp != 0UL) {
+            Timestamp = other.Timestamp;
+          }
+          if (other.AccelerationX != 0D) {
+            AccelerationX = other.AccelerationX;
+          }
+          if (other.AccelerationY != 0D) {
+            AccelerationY = other.AccelerationY;
+          }
+          if (other.AccelerationZ != 0D) {
+            AccelerationZ = other.AccelerationZ;
+          }
+          if (other.MagneticFieldX != 0D) {
+            MagneticFieldX = other.MagneticFieldX;
+          }
+          if (other.MagneticFieldY != 0D) {
+            MagneticFieldY = other.MagneticFieldY;
+          }
+          if (other.MagneticFieldZ != 0D) {
+            MagneticFieldZ = other.MagneticFieldZ;
+          }
+          if (other.MagneticFieldAccuracy != 0) {
+            MagneticFieldAccuracy = other.MagneticFieldAccuracy;
+          }
+          if (other.AttitudePitch != 0D) {
+            AttitudePitch = other.AttitudePitch;
+          }
+          if (other.AttitudeYaw != 0D) {
+            AttitudeYaw = other.AttitudeYaw;
+          }
+          if (other.AttitudeRoll != 0D) {
+            AttitudeRoll = other.AttitudeRoll;
+          }
+          if (other.RotationRateX != 0D) {
+            RotationRateX = other.RotationRateX;
+          }
+          if (other.RotationRateY != 0D) {
+            RotationRateY = other.RotationRateY;
+          }
+          if (other.RotationRateZ != 0D) {
+            RotationRateZ = other.RotationRateZ;
+          }
+          if (other.GravityX != 0D) {
+            GravityX = other.GravityX;
+          }
+          if (other.GravityY != 0D) {
+            GravityY = other.GravityY;
+          }
+          if (other.GravityZ != 0D) {
+            GravityZ = other.GravityZ;
+          }
+          if (other.Status != 0) {
+            Status = other.Status;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 8: {
+                Timestamp = input.ReadUInt64();
+                break;
+              }
+              case 25: {
+                AccelerationX = input.ReadDouble();
+                break;
+              }
+              case 33: {
+                AccelerationY = input.ReadDouble();
+                break;
+              }
+              case 41: {
+                AccelerationZ = input.ReadDouble();
+                break;
+              }
+              case 49: {
+                MagneticFieldX = input.ReadDouble();
+                break;
+              }
+              case 57: {
+                MagneticFieldY = input.ReadDouble();
+                break;
+              }
+              case 65: {
+                MagneticFieldZ = input.ReadDouble();
+                break;
+              }
+              case 72: {
+                MagneticFieldAccuracy = input.ReadInt32();
+                break;
+              }
+              case 81: {
+                AttitudePitch = input.ReadDouble();
+                break;
+              }
+              case 89: {
+                AttitudeYaw = input.ReadDouble();
+                break;
+              }
+              case 97: {
+                AttitudeRoll = input.ReadDouble();
+                break;
+              }
+              case 105: {
+                RotationRateX = input.ReadDouble();
+                break;
+              }
+              case 113: {
+                RotationRateY = input.ReadDouble();
+                break;
+              }
+              case 121: {
+                RotationRateZ = input.ReadDouble();
+                break;
+              }
+              case 129: {
+                GravityX = input.ReadDouble();
+                break;
+              }
+              case 137: {
+                GravityY = input.ReadDouble();
+                break;
+              }
+              case 145: {
+                GravityZ = input.ReadDouble();
+                break;
+              }
+              case 152: {
+                Status = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+      public sealed partial class DeviceInfo : pb::IMessage<DeviceInfo> {
+        private static readonly pb::MessageParser<DeviceInfo> _parser = new pb::MessageParser<DeviceInfo>(() => new DeviceInfo());
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<DeviceInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public DeviceInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public DeviceInfo(DeviceInfo other) : this() {
+          deviceId_ = other.deviceId_;
+          androidBoardName_ = other.androidBoardName_;
+          androidBootloader_ = other.androidBootloader_;
+          deviceBrand_ = other.deviceBrand_;
+          deviceModel_ = other.deviceModel_;
+          deviceModelIdentifier_ = other.deviceModelIdentifier_;
+          deviceCommsModel_ = other.deviceCommsModel_;
+          hardwareManufacturer_ = other.hardwareManufacturer_;
+          hardwareModel_ = other.hardwareModel_;
+          firmwareBrand_ = other.firmwareBrand_;
+          firmwareTags_ = other.firmwareTags_;
+          firmwareType_ = other.firmwareType_;
+          firmwareFingerprint_ = other.firmwareFingerprint_;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public DeviceInfo Clone() {
+          return new DeviceInfo(this);
+        }
+
+        /// <summary>Field number for the "device_id" field.</summary>
+        public const int DeviceIdFieldNumber = 1;
+        private string deviceId_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DeviceId {
+          get { return deviceId_; }
+          set {
+            deviceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "android_board_name" field.</summary>
+        public const int AndroidBoardNameFieldNumber = 2;
+        private string androidBoardName_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string AndroidBoardName {
+          get { return androidBoardName_; }
+          set {
+            androidBoardName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "android_bootloader" field.</summary>
+        public const int AndroidBootloaderFieldNumber = 3;
+        private string androidBootloader_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string AndroidBootloader {
+          get { return androidBootloader_; }
+          set {
+            androidBootloader_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "device_brand" field.</summary>
+        public const int DeviceBrandFieldNumber = 4;
+        private string deviceBrand_ = "";
+        /// <summary>
+        ///  product.brand
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DeviceBrand {
+          get { return deviceBrand_; }
+          set {
+            deviceBrand_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "device_model" field.</summary>
+        public const int DeviceModelFieldNumber = 5;
+        private string deviceModel_ = "";
+        /// <summary>
+        ///  product.device
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DeviceModel {
+          get { return deviceModel_; }
+          set {
+            deviceModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "device_model_identifier" field.</summary>
+        public const int DeviceModelIdentifierFieldNumber = 6;
+        private string deviceModelIdentifier_ = "";
+        /// <summary>
+        ///  Android only, build.display.id
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DeviceModelIdentifier {
+          get { return deviceModelIdentifier_; }
+          set {
+            deviceModelIdentifier_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "device_comms_model" field.</summary>
+        public const int DeviceCommsModelFieldNumber = 7;
+        private string deviceCommsModel_ = "";
+        /// <summary>
+        ///  boot.hardware
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DeviceCommsModel {
+          get { return deviceCommsModel_; }
+          set {
+            deviceCommsModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "hardware_manufacturer" field.</summary>
+        public const int HardwareManufacturerFieldNumber = 8;
+        private string hardwareManufacturer_ = "";
+        /// <summary>
+        ///  product.manufacturer
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string HardwareManufacturer {
+          get { return hardwareManufacturer_; }
+          set {
+            hardwareManufacturer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "hardware_model" field.</summary>
+        public const int HardwareModelFieldNumber = 9;
+        private string hardwareModel_ = "";
+        /// <summary>
+        ///  product.model
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string HardwareModel {
+          get { return hardwareModel_; }
+          set {
+            hardwareModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "firmware_brand" field.</summary>
+        public const int FirmwareBrandFieldNumber = 10;
+        private string firmwareBrand_ = "";
+        /// <summary>
+        ///  On iOS: "iPhone OS", product.name
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string FirmwareBrand {
+          get { return firmwareBrand_; }
+          set {
+            firmwareBrand_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "firmware_tags" field.</summary>
+        public const int FirmwareTagsFieldNumber = 12;
+        private string firmwareTags_ = "";
+        /// <summary>
+        ///  Android only, build.tags
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string FirmwareTags {
+          get { return firmwareTags_; }
+          set {
+            firmwareTags_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "firmware_type" field.</summary>
+        public const int FirmwareTypeFieldNumber = 13;
+        private string firmwareType_ = "";
+        /// <summary>
+        ///  On iOS instead: iOS version; // build.type
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string FirmwareType {
+          get { return firmwareType_; }
+          set {
+            firmwareType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "firmware_fingerprint" field.</summary>
+        public const int FirmwareFingerprintFieldNumber = 14;
+        private string firmwareFingerprint_ = "";
+        /// <summary>
+        ///  Android only, build.fingerprint
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string FirmwareFingerprint {
+          get { return firmwareFingerprint_; }
+          set {
+            firmwareFingerprint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as DeviceInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(DeviceInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DeviceId != other.DeviceId) return false;
+          if (AndroidBoardName != other.AndroidBoardName) return false;
+          if (AndroidBootloader != other.AndroidBootloader) return false;
+          if (DeviceBrand != other.DeviceBrand) return false;
+          if (DeviceModel != other.DeviceModel) return false;
+          if (DeviceModelIdentifier != other.DeviceModelIdentifier) return false;
+          if (DeviceCommsModel != other.DeviceCommsModel) return false;
+          if (HardwareManufacturer != other.HardwareManufacturer) return false;
+          if (HardwareModel != other.HardwareModel) return false;
+          if (FirmwareBrand != other.FirmwareBrand) return false;
+          if (FirmwareTags != other.FirmwareTags) return false;
+          if (FirmwareType != other.FirmwareType) return false;
+          if (FirmwareFingerprint != other.FirmwareFingerprint) return false;
+          return true;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DeviceId.Length != 0) hash ^= DeviceId.GetHashCode();
+          if (AndroidBoardName.Length != 0) hash ^= AndroidBoardName.GetHashCode();
+          if (AndroidBootloader.Length != 0) hash ^= AndroidBootloader.GetHashCode();
+          if (DeviceBrand.Length != 0) hash ^= DeviceBrand.GetHashCode();
+          if (DeviceModel.Length != 0) hash ^= DeviceModel.GetHashCode();
+          if (DeviceModelIdentifier.Length != 0) hash ^= DeviceModelIdentifier.GetHashCode();
+          if (DeviceCommsModel.Length != 0) hash ^= DeviceCommsModel.GetHashCode();
+          if (HardwareManufacturer.Length != 0) hash ^= HardwareManufacturer.GetHashCode();
+          if (HardwareModel.Length != 0) hash ^= HardwareModel.GetHashCode();
+          if (FirmwareBrand.Length != 0) hash ^= FirmwareBrand.GetHashCode();
+          if (FirmwareTags.Length != 0) hash ^= FirmwareTags.GetHashCode();
+          if (FirmwareType.Length != 0) hash ^= FirmwareType.GetHashCode();
+          if (FirmwareFingerprint.Length != 0) hash ^= FirmwareFingerprint.GetHashCode();
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (DeviceId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DeviceId);
+          }
+          if (AndroidBoardName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(AndroidBoardName);
+          }
+          if (AndroidBootloader.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(AndroidBootloader);
+          }
+          if (DeviceBrand.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(DeviceBrand);
+          }
+          if (DeviceModel.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(DeviceModel);
+          }
+          if (DeviceModelIdentifier.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(DeviceModelIdentifier);
+          }
+          if (DeviceCommsModel.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(DeviceCommsModel);
+          }
+          if (HardwareManufacturer.Length != 0) {
+            output.WriteRawTag(66);
+            output.WriteString(HardwareManufacturer);
+          }
+          if (HardwareModel.Length != 0) {
+            output.WriteRawTag(74);
+            output.WriteString(HardwareModel);
+          }
+          if (FirmwareBrand.Length != 0) {
+            output.WriteRawTag(82);
+            output.WriteString(FirmwareBrand);
+          }
+          if (FirmwareTags.Length != 0) {
+            output.WriteRawTag(98);
+            output.WriteString(FirmwareTags);
+          }
+          if (FirmwareType.Length != 0) {
+            output.WriteRawTag(106);
+            output.WriteString(FirmwareType);
+          }
+          if (FirmwareFingerprint.Length != 0) {
+            output.WriteRawTag(114);
+            output.WriteString(FirmwareFingerprint);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (DeviceId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceId);
+          }
+          if (AndroidBoardName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AndroidBoardName);
+          }
+          if (AndroidBootloader.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(AndroidBootloader);
+          }
+          if (DeviceBrand.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceBrand);
+          }
+          if (DeviceModel.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceModel);
+          }
+          if (DeviceModelIdentifier.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceModelIdentifier);
+          }
+          if (DeviceCommsModel.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceCommsModel);
+          }
+          if (HardwareManufacturer.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(HardwareManufacturer);
+          }
+          if (HardwareModel.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(HardwareModel);
+          }
+          if (FirmwareBrand.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareBrand);
+          }
+          if (FirmwareTags.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareTags);
+          }
+          if (FirmwareType.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareType);
+          }
+          if (FirmwareFingerprint.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareFingerprint);
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(DeviceInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DeviceId.Length != 0) {
+            DeviceId = other.DeviceId;
+          }
+          if (other.AndroidBoardName.Length != 0) {
+            AndroidBoardName = other.AndroidBoardName;
+          }
+          if (other.AndroidBootloader.Length != 0) {
+            AndroidBootloader = other.AndroidBootloader;
+          }
+          if (other.DeviceBrand.Length != 0) {
+            DeviceBrand = other.DeviceBrand;
+          }
+          if (other.DeviceModel.Length != 0) {
+            DeviceModel = other.DeviceModel;
+          }
+          if (other.DeviceModelIdentifier.Length != 0) {
+            DeviceModelIdentifier = other.DeviceModelIdentifier;
+          }
+          if (other.DeviceCommsModel.Length != 0) {
+            DeviceCommsModel = other.DeviceCommsModel;
+          }
+          if (other.HardwareManufacturer.Length != 0) {
+            HardwareManufacturer = other.HardwareManufacturer;
+          }
+          if (other.HardwareModel.Length != 0) {
+            HardwareModel = other.HardwareModel;
+          }
+          if (other.FirmwareBrand.Length != 0) {
+            FirmwareBrand = other.FirmwareBrand;
+          }
+          if (other.FirmwareTags.Length != 0) {
+            FirmwareTags = other.FirmwareTags;
+          }
+          if (other.FirmwareType.Length != 0) {
+            FirmwareType = other.FirmwareType;
+          }
+          if (other.FirmwareFingerprint.Length != 0) {
+            FirmwareFingerprint = other.FirmwareFingerprint;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                input.SkipLastField();
+                break;
+              case 10: {
+                DeviceId = input.ReadString();
+                break;
+              }
+              case 18: {
+                AndroidBoardName = input.ReadString();
+                break;
+              }
+              case 26: {
+                AndroidBootloader = input.ReadString();
+                break;
+              }
+              case 34: {
+                DeviceBrand = input.ReadString();
+                break;
+              }
+              case 42: {
+                DeviceModel = input.ReadString();
+                break;
+              }
+              case 50: {
+                DeviceModelIdentifier = input.ReadString();
+                break;
+              }
+              case 58: {
+                DeviceCommsModel = input.ReadString();
+                break;
+              }
+              case 66: {
+                HardwareManufacturer = input.ReadString();
+                break;
+              }
+              case 74: {
+                HardwareModel = input.ReadString();
+                break;
+              }
+              case 82: {
+                FirmwareBrand = input.ReadString();
+                break;
+              }
+              case 98: {
+                FirmwareTags = input.ReadString();
+                break;
+              }
+              case 106: {
+                FirmwareType = input.ReadString();
+                break;
+              }
+              case 114: {
+                FirmwareFingerprint = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
       public sealed partial class AndroidGpsInfo : pb::IMessage<AndroidGpsInfo> {
         private static readonly pb::MessageParser<AndroidGpsInfo> _parser = new pb::MessageParser<AndroidGpsInfo>(() => new AndroidGpsInfo());
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1005,7 +2767,7 @@ namespace POGOProtos.Networking.Envelopes {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[1]; }
+          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1262,1412 +3024,100 @@ namespace POGOProtos.Networking.Envelopes {
 
       }
 
-      public sealed partial class SensorInfo : pb::IMessage<SensorInfo> {
-        private static readonly pb::MessageParser<SensorInfo> _parser = new pb::MessageParser<SensorInfo>(() => new SensorInfo());
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<SensorInfo> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[2]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public SensorInfo() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public SensorInfo(SensorInfo other) : this() {
-          timestampSnapshot_ = other.timestampSnapshot_;
-          linearAccelerationX_ = other.linearAccelerationX_;
-          linearAccelerationY_ = other.linearAccelerationY_;
-          linearAccelerationZ_ = other.linearAccelerationZ_;
-          magneticFieldX_ = other.magneticFieldX_;
-          magneticFieldY_ = other.magneticFieldY_;
-          magneticFieldZ_ = other.magneticFieldZ_;
-          rotationVectorX_ = other.rotationVectorX_;
-          rotationVectorY_ = other.rotationVectorY_;
-          rotationVectorZ_ = other.rotationVectorZ_;
-          gyroscopeRawX_ = other.gyroscopeRawX_;
-          gyroscopeRawY_ = other.gyroscopeRawY_;
-          gyroscopeRawZ_ = other.gyroscopeRawZ_;
-          gravityX_ = other.gravityX_;
-          gravityY_ = other.gravityY_;
-          gravityZ_ = other.gravityZ_;
-          accelerometerAxes_ = other.accelerometerAxes_;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public SensorInfo Clone() {
-          return new SensorInfo(this);
-        }
-
-        /// <summary>Field number for the "timestamp_snapshot" field.</summary>
-        public const int TimestampSnapshotFieldNumber = 1;
-        private ulong timestampSnapshot_;
-        /// <summary>
-        ///  in ms since start
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ulong TimestampSnapshot {
-          get { return timestampSnapshot_; }
-          set {
-            timestampSnapshot_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "linear_acceleration_x" field.</summary>
-        public const int LinearAccelerationXFieldNumber = 3;
-        private double linearAccelerationX_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double LinearAccelerationX {
-          get { return linearAccelerationX_; }
-          set {
-            linearAccelerationX_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "linear_acceleration_y" field.</summary>
-        public const int LinearAccelerationYFieldNumber = 4;
-        private double linearAccelerationY_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double LinearAccelerationY {
-          get { return linearAccelerationY_; }
-          set {
-            linearAccelerationY_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "linear_acceleration_z" field.</summary>
-        public const int LinearAccelerationZFieldNumber = 5;
-        private double linearAccelerationZ_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double LinearAccelerationZ {
-          get { return linearAccelerationZ_; }
-          set {
-            linearAccelerationZ_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "magnetic_field_x" field.</summary>
-        public const int MagneticFieldXFieldNumber = 6;
-        private double magneticFieldX_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double MagneticFieldX {
-          get { return magneticFieldX_; }
-          set {
-            magneticFieldX_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "magnetic_field_y" field.</summary>
-        public const int MagneticFieldYFieldNumber = 7;
-        private double magneticFieldY_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double MagneticFieldY {
-          get { return magneticFieldY_; }
-          set {
-            magneticFieldY_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "magnetic_field_z" field.</summary>
-        public const int MagneticFieldZFieldNumber = 8;
-        private double magneticFieldZ_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double MagneticFieldZ {
-          get { return magneticFieldZ_; }
-          set {
-            magneticFieldZ_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "rotation_vector_x" field.</summary>
-        public const int RotationVectorXFieldNumber = 10;
-        private double rotationVectorX_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double RotationVectorX {
-          get { return rotationVectorX_; }
-          set {
-            rotationVectorX_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "rotation_vector_y" field.</summary>
-        public const int RotationVectorYFieldNumber = 11;
-        private double rotationVectorY_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double RotationVectorY {
-          get { return rotationVectorY_; }
-          set {
-            rotationVectorY_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "rotation_vector_z" field.</summary>
-        public const int RotationVectorZFieldNumber = 12;
-        private double rotationVectorZ_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double RotationVectorZ {
-          get { return rotationVectorZ_; }
-          set {
-            rotationVectorZ_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "gyroscope_raw_x" field.</summary>
-        public const int GyroscopeRawXFieldNumber = 13;
-        private double gyroscopeRawX_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double GyroscopeRawX {
-          get { return gyroscopeRawX_; }
-          set {
-            gyroscopeRawX_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "gyroscope_raw_y" field.</summary>
-        public const int GyroscopeRawYFieldNumber = 14;
-        private double gyroscopeRawY_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double GyroscopeRawY {
-          get { return gyroscopeRawY_; }
-          set {
-            gyroscopeRawY_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "gyroscope_raw_z" field.</summary>
-        public const int GyroscopeRawZFieldNumber = 15;
-        private double gyroscopeRawZ_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double GyroscopeRawZ {
-          get { return gyroscopeRawZ_; }
-          set {
-            gyroscopeRawZ_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "gravity_x" field.</summary>
-        public const int GravityXFieldNumber = 16;
-        private double gravityX_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double GravityX {
-          get { return gravityX_; }
-          set {
-            gravityX_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "gravity_y" field.</summary>
-        public const int GravityYFieldNumber = 17;
-        private double gravityY_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double GravityY {
-          get { return gravityY_; }
-          set {
-            gravityY_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "gravity_z" field.</summary>
-        public const int GravityZFieldNumber = 18;
-        private double gravityZ_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double GravityZ {
-          get { return gravityZ_; }
-          set {
-            gravityZ_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "accelerometer_axes" field.</summary>
-        public const int AccelerometerAxesFieldNumber = 19;
-        private ulong accelerometerAxes_;
-        /// <summary>
-        ///  Always 3
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ulong AccelerometerAxes {
-          get { return accelerometerAxes_; }
-          set {
-            accelerometerAxes_ = value;
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as SensorInfo);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(SensorInfo other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (TimestampSnapshot != other.TimestampSnapshot) return false;
-          if (LinearAccelerationX != other.LinearAccelerationX) return false;
-          if (LinearAccelerationY != other.LinearAccelerationY) return false;
-          if (LinearAccelerationZ != other.LinearAccelerationZ) return false;
-          if (MagneticFieldX != other.MagneticFieldX) return false;
-          if (MagneticFieldY != other.MagneticFieldY) return false;
-          if (MagneticFieldZ != other.MagneticFieldZ) return false;
-          if (RotationVectorX != other.RotationVectorX) return false;
-          if (RotationVectorY != other.RotationVectorY) return false;
-          if (RotationVectorZ != other.RotationVectorZ) return false;
-          if (GyroscopeRawX != other.GyroscopeRawX) return false;
-          if (GyroscopeRawY != other.GyroscopeRawY) return false;
-          if (GyroscopeRawZ != other.GyroscopeRawZ) return false;
-          if (GravityX != other.GravityX) return false;
-          if (GravityY != other.GravityY) return false;
-          if (GravityZ != other.GravityZ) return false;
-          if (AccelerometerAxes != other.AccelerometerAxes) return false;
-          return true;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (TimestampSnapshot != 0UL) hash ^= TimestampSnapshot.GetHashCode();
-          if (LinearAccelerationX != 0D) hash ^= LinearAccelerationX.GetHashCode();
-          if (LinearAccelerationY != 0D) hash ^= LinearAccelerationY.GetHashCode();
-          if (LinearAccelerationZ != 0D) hash ^= LinearAccelerationZ.GetHashCode();
-          if (MagneticFieldX != 0D) hash ^= MagneticFieldX.GetHashCode();
-          if (MagneticFieldY != 0D) hash ^= MagneticFieldY.GetHashCode();
-          if (MagneticFieldZ != 0D) hash ^= MagneticFieldZ.GetHashCode();
-          if (RotationVectorX != 0D) hash ^= RotationVectorX.GetHashCode();
-          if (RotationVectorY != 0D) hash ^= RotationVectorY.GetHashCode();
-          if (RotationVectorZ != 0D) hash ^= RotationVectorZ.GetHashCode();
-          if (GyroscopeRawX != 0D) hash ^= GyroscopeRawX.GetHashCode();
-          if (GyroscopeRawY != 0D) hash ^= GyroscopeRawY.GetHashCode();
-          if (GyroscopeRawZ != 0D) hash ^= GyroscopeRawZ.GetHashCode();
-          if (GravityX != 0D) hash ^= GravityX.GetHashCode();
-          if (GravityY != 0D) hash ^= GravityY.GetHashCode();
-          if (GravityZ != 0D) hash ^= GravityZ.GetHashCode();
-          if (AccelerometerAxes != 0UL) hash ^= AccelerometerAxes.GetHashCode();
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (TimestampSnapshot != 0UL) {
-            output.WriteRawTag(8);
-            output.WriteUInt64(TimestampSnapshot);
-          }
-          if (LinearAccelerationX != 0D) {
-            output.WriteRawTag(25);
-            output.WriteDouble(LinearAccelerationX);
-          }
-          if (LinearAccelerationY != 0D) {
-            output.WriteRawTag(33);
-            output.WriteDouble(LinearAccelerationY);
-          }
-          if (LinearAccelerationZ != 0D) {
-            output.WriteRawTag(41);
-            output.WriteDouble(LinearAccelerationZ);
-          }
-          if (MagneticFieldX != 0D) {
-            output.WriteRawTag(49);
-            output.WriteDouble(MagneticFieldX);
-          }
-          if (MagneticFieldY != 0D) {
-            output.WriteRawTag(57);
-            output.WriteDouble(MagneticFieldY);
-          }
-          if (MagneticFieldZ != 0D) {
-            output.WriteRawTag(65);
-            output.WriteDouble(MagneticFieldZ);
-          }
-          if (RotationVectorX != 0D) {
-            output.WriteRawTag(81);
-            output.WriteDouble(RotationVectorX);
-          }
-          if (RotationVectorY != 0D) {
-            output.WriteRawTag(89);
-            output.WriteDouble(RotationVectorY);
-          }
-          if (RotationVectorZ != 0D) {
-            output.WriteRawTag(97);
-            output.WriteDouble(RotationVectorZ);
-          }
-          if (GyroscopeRawX != 0D) {
-            output.WriteRawTag(105);
-            output.WriteDouble(GyroscopeRawX);
-          }
-          if (GyroscopeRawY != 0D) {
-            output.WriteRawTag(113);
-            output.WriteDouble(GyroscopeRawY);
-          }
-          if (GyroscopeRawZ != 0D) {
-            output.WriteRawTag(121);
-            output.WriteDouble(GyroscopeRawZ);
-          }
-          if (GravityX != 0D) {
-            output.WriteRawTag(129, 1);
-            output.WriteDouble(GravityX);
-          }
-          if (GravityY != 0D) {
-            output.WriteRawTag(137, 1);
-            output.WriteDouble(GravityY);
-          }
-          if (GravityZ != 0D) {
-            output.WriteRawTag(145, 1);
-            output.WriteDouble(GravityZ);
-          }
-          if (AccelerometerAxes != 0UL) {
-            output.WriteRawTag(152, 1);
-            output.WriteUInt64(AccelerometerAxes);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (TimestampSnapshot != 0UL) {
-            size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TimestampSnapshot);
-          }
-          if (LinearAccelerationX != 0D) {
-            size += 1 + 8;
-          }
-          if (LinearAccelerationY != 0D) {
-            size += 1 + 8;
-          }
-          if (LinearAccelerationZ != 0D) {
-            size += 1 + 8;
-          }
-          if (MagneticFieldX != 0D) {
-            size += 1 + 8;
-          }
-          if (MagneticFieldY != 0D) {
-            size += 1 + 8;
-          }
-          if (MagneticFieldZ != 0D) {
-            size += 1 + 8;
-          }
-          if (RotationVectorX != 0D) {
-            size += 1 + 8;
-          }
-          if (RotationVectorY != 0D) {
-            size += 1 + 8;
-          }
-          if (RotationVectorZ != 0D) {
-            size += 1 + 8;
-          }
-          if (GyroscopeRawX != 0D) {
-            size += 1 + 8;
-          }
-          if (GyroscopeRawY != 0D) {
-            size += 1 + 8;
-          }
-          if (GyroscopeRawZ != 0D) {
-            size += 1 + 8;
-          }
-          if (GravityX != 0D) {
-            size += 2 + 8;
-          }
-          if (GravityY != 0D) {
-            size += 2 + 8;
-          }
-          if (GravityZ != 0D) {
-            size += 2 + 8;
-          }
-          if (AccelerometerAxes != 0UL) {
-            size += 2 + pb::CodedOutputStream.ComputeUInt64Size(AccelerometerAxes);
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(SensorInfo other) {
-          if (other == null) {
-            return;
-          }
-          if (other.TimestampSnapshot != 0UL) {
-            TimestampSnapshot = other.TimestampSnapshot;
-          }
-          if (other.LinearAccelerationX != 0D) {
-            LinearAccelerationX = other.LinearAccelerationX;
-          }
-          if (other.LinearAccelerationY != 0D) {
-            LinearAccelerationY = other.LinearAccelerationY;
-          }
-          if (other.LinearAccelerationZ != 0D) {
-            LinearAccelerationZ = other.LinearAccelerationZ;
-          }
-          if (other.MagneticFieldX != 0D) {
-            MagneticFieldX = other.MagneticFieldX;
-          }
-          if (other.MagneticFieldY != 0D) {
-            MagneticFieldY = other.MagneticFieldY;
-          }
-          if (other.MagneticFieldZ != 0D) {
-            MagneticFieldZ = other.MagneticFieldZ;
-          }
-          if (other.RotationVectorX != 0D) {
-            RotationVectorX = other.RotationVectorX;
-          }
-          if (other.RotationVectorY != 0D) {
-            RotationVectorY = other.RotationVectorY;
-          }
-          if (other.RotationVectorZ != 0D) {
-            RotationVectorZ = other.RotationVectorZ;
-          }
-          if (other.GyroscopeRawX != 0D) {
-            GyroscopeRawX = other.GyroscopeRawX;
-          }
-          if (other.GyroscopeRawY != 0D) {
-            GyroscopeRawY = other.GyroscopeRawY;
-          }
-          if (other.GyroscopeRawZ != 0D) {
-            GyroscopeRawZ = other.GyroscopeRawZ;
-          }
-          if (other.GravityX != 0D) {
-            GravityX = other.GravityX;
-          }
-          if (other.GravityY != 0D) {
-            GravityY = other.GravityY;
-          }
-          if (other.GravityZ != 0D) {
-            GravityZ = other.GravityZ;
-          }
-          if (other.AccelerometerAxes != 0UL) {
-            AccelerometerAxes = other.AccelerometerAxes;
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                input.SkipLastField();
-                break;
-              case 8: {
-                TimestampSnapshot = input.ReadUInt64();
-                break;
-              }
-              case 25: {
-                LinearAccelerationX = input.ReadDouble();
-                break;
-              }
-              case 33: {
-                LinearAccelerationY = input.ReadDouble();
-                break;
-              }
-              case 41: {
-                LinearAccelerationZ = input.ReadDouble();
-                break;
-              }
-              case 49: {
-                MagneticFieldX = input.ReadDouble();
-                break;
-              }
-              case 57: {
-                MagneticFieldY = input.ReadDouble();
-                break;
-              }
-              case 65: {
-                MagneticFieldZ = input.ReadDouble();
-                break;
-              }
-              case 81: {
-                RotationVectorX = input.ReadDouble();
-                break;
-              }
-              case 89: {
-                RotationVectorY = input.ReadDouble();
-                break;
-              }
-              case 97: {
-                RotationVectorZ = input.ReadDouble();
-                break;
-              }
-              case 105: {
-                GyroscopeRawX = input.ReadDouble();
-                break;
-              }
-              case 113: {
-                GyroscopeRawY = input.ReadDouble();
-                break;
-              }
-              case 121: {
-                GyroscopeRawZ = input.ReadDouble();
-                break;
-              }
-              case 129: {
-                GravityX = input.ReadDouble();
-                break;
-              }
-              case 137: {
-                GravityY = input.ReadDouble();
-                break;
-              }
-              case 145: {
-                GravityZ = input.ReadDouble();
-                break;
-              }
-              case 152: {
-                AccelerometerAxes = input.ReadUInt64();
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
-      public sealed partial class DeviceInfo : pb::IMessage<DeviceInfo> {
-        private static readonly pb::MessageParser<DeviceInfo> _parser = new pb::MessageParser<DeviceInfo>(() => new DeviceInfo());
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<DeviceInfo> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[3]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public DeviceInfo() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public DeviceInfo(DeviceInfo other) : this() {
-          deviceId_ = other.deviceId_;
-          androidBoardName_ = other.androidBoardName_;
-          androidBootloader_ = other.androidBootloader_;
-          deviceBrand_ = other.deviceBrand_;
-          deviceModel_ = other.deviceModel_;
-          deviceModelIdentifier_ = other.deviceModelIdentifier_;
-          deviceModelBoot_ = other.deviceModelBoot_;
-          hardwareManufacturer_ = other.hardwareManufacturer_;
-          hardwareModel_ = other.hardwareModel_;
-          firmwareBrand_ = other.firmwareBrand_;
-          firmwareTags_ = other.firmwareTags_;
-          firmwareType_ = other.firmwareType_;
-          firmwareFingerprint_ = other.firmwareFingerprint_;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public DeviceInfo Clone() {
-          return new DeviceInfo(this);
-        }
-
-        /// <summary>Field number for the "device_id" field.</summary>
-        public const int DeviceIdFieldNumber = 1;
-        private string deviceId_ = "";
-        /// <summary>
-        ///  Hex string
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string DeviceId {
-          get { return deviceId_; }
-          set {
-            deviceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "android_board_name" field.</summary>
-        public const int AndroidBoardNameFieldNumber = 2;
-        private string androidBoardName_ = "";
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string AndroidBoardName {
-          get { return androidBoardName_; }
-          set {
-            androidBoardName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "android_bootloader" field.</summary>
-        public const int AndroidBootloaderFieldNumber = 3;
-        private string androidBootloader_ = "";
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string AndroidBootloader {
-          get { return androidBootloader_; }
-          set {
-            androidBootloader_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "device_brand" field.</summary>
-        public const int DeviceBrandFieldNumber = 4;
-        private string deviceBrand_ = "";
-        /// <summary>
-        ///  On Android: product.brand
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string DeviceBrand {
-          get { return deviceBrand_; }
-          set {
-            deviceBrand_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "device_model" field.</summary>
-        public const int DeviceModelFieldNumber = 5;
-        private string deviceModel_ = "";
-        /// <summary>
-        ///  On Android: product.device
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string DeviceModel {
-          get { return deviceModel_; }
-          set {
-            deviceModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "device_model_identifier" field.</summary>
-        public const int DeviceModelIdentifierFieldNumber = 6;
-        private string deviceModelIdentifier_ = "";
-        /// <summary>
-        ///  Android only, build.display.id
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string DeviceModelIdentifier {
-          get { return deviceModelIdentifier_; }
-          set {
-            deviceModelIdentifier_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "device_model_boot" field.</summary>
-        public const int DeviceModelBootFieldNumber = 7;
-        private string deviceModelBoot_ = "";
-        /// <summary>
-        ///  On Android: boot.hardware
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string DeviceModelBoot {
-          get { return deviceModelBoot_; }
-          set {
-            deviceModelBoot_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "hardware_manufacturer" field.</summary>
-        public const int HardwareManufacturerFieldNumber = 8;
-        private string hardwareManufacturer_ = "";
-        /// <summary>
-        ///  On Android: product.manufacturer
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string HardwareManufacturer {
-          get { return hardwareManufacturer_; }
-          set {
-            hardwareManufacturer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "hardware_model" field.</summary>
-        public const int HardwareModelFieldNumber = 9;
-        private string hardwareModel_ = "";
-        /// <summary>
-        ///  On Android: product.model
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string HardwareModel {
-          get { return hardwareModel_; }
-          set {
-            hardwareModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "firmware_brand" field.</summary>
-        public const int FirmwareBrandFieldNumber = 10;
-        private string firmwareBrand_ = "";
-        /// <summary>
-        ///  On Android: product.name, on iOS: "iPhone OS"
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string FirmwareBrand {
-          get { return firmwareBrand_; }
-          set {
-            firmwareBrand_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "firmware_tags" field.</summary>
-        public const int FirmwareTagsFieldNumber = 12;
-        private string firmwareTags_ = "";
-        /// <summary>
-        ///  Android only, build.tags
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string FirmwareTags {
-          get { return firmwareTags_; }
-          set {
-            firmwareTags_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "firmware_type" field.</summary>
-        public const int FirmwareTypeFieldNumber = 13;
-        private string firmwareType_ = "";
-        /// <summary>
-        ///  On Android: build.type, on iOS instead: iOS version
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string FirmwareType {
-          get { return firmwareType_; }
-          set {
-            firmwareType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "firmware_fingerprint" field.</summary>
-        public const int FirmwareFingerprintFieldNumber = 14;
-        private string firmwareFingerprint_ = "";
-        /// <summary>
-        ///  Android only, build.fingerprint
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string FirmwareFingerprint {
-          get { return firmwareFingerprint_; }
-          set {
-            firmwareFingerprint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as DeviceInfo);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(DeviceInfo other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (DeviceId != other.DeviceId) return false;
-          if (AndroidBoardName != other.AndroidBoardName) return false;
-          if (AndroidBootloader != other.AndroidBootloader) return false;
-          if (DeviceBrand != other.DeviceBrand) return false;
-          if (DeviceModel != other.DeviceModel) return false;
-          if (DeviceModelIdentifier != other.DeviceModelIdentifier) return false;
-          if (DeviceModelBoot != other.DeviceModelBoot) return false;
-          if (HardwareManufacturer != other.HardwareManufacturer) return false;
-          if (HardwareModel != other.HardwareModel) return false;
-          if (FirmwareBrand != other.FirmwareBrand) return false;
-          if (FirmwareTags != other.FirmwareTags) return false;
-          if (FirmwareType != other.FirmwareType) return false;
-          if (FirmwareFingerprint != other.FirmwareFingerprint) return false;
-          return true;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (DeviceId.Length != 0) hash ^= DeviceId.GetHashCode();
-          if (AndroidBoardName.Length != 0) hash ^= AndroidBoardName.GetHashCode();
-          if (AndroidBootloader.Length != 0) hash ^= AndroidBootloader.GetHashCode();
-          if (DeviceBrand.Length != 0) hash ^= DeviceBrand.GetHashCode();
-          if (DeviceModel.Length != 0) hash ^= DeviceModel.GetHashCode();
-          if (DeviceModelIdentifier.Length != 0) hash ^= DeviceModelIdentifier.GetHashCode();
-          if (DeviceModelBoot.Length != 0) hash ^= DeviceModelBoot.GetHashCode();
-          if (HardwareManufacturer.Length != 0) hash ^= HardwareManufacturer.GetHashCode();
-          if (HardwareModel.Length != 0) hash ^= HardwareModel.GetHashCode();
-          if (FirmwareBrand.Length != 0) hash ^= FirmwareBrand.GetHashCode();
-          if (FirmwareTags.Length != 0) hash ^= FirmwareTags.GetHashCode();
-          if (FirmwareType.Length != 0) hash ^= FirmwareType.GetHashCode();
-          if (FirmwareFingerprint.Length != 0) hash ^= FirmwareFingerprint.GetHashCode();
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (DeviceId.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(DeviceId);
-          }
-          if (AndroidBoardName.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(AndroidBoardName);
-          }
-          if (AndroidBootloader.Length != 0) {
-            output.WriteRawTag(26);
-            output.WriteString(AndroidBootloader);
-          }
-          if (DeviceBrand.Length != 0) {
-            output.WriteRawTag(34);
-            output.WriteString(DeviceBrand);
-          }
-          if (DeviceModel.Length != 0) {
-            output.WriteRawTag(42);
-            output.WriteString(DeviceModel);
-          }
-          if (DeviceModelIdentifier.Length != 0) {
-            output.WriteRawTag(50);
-            output.WriteString(DeviceModelIdentifier);
-          }
-          if (DeviceModelBoot.Length != 0) {
-            output.WriteRawTag(58);
-            output.WriteString(DeviceModelBoot);
-          }
-          if (HardwareManufacturer.Length != 0) {
-            output.WriteRawTag(66);
-            output.WriteString(HardwareManufacturer);
-          }
-          if (HardwareModel.Length != 0) {
-            output.WriteRawTag(74);
-            output.WriteString(HardwareModel);
-          }
-          if (FirmwareBrand.Length != 0) {
-            output.WriteRawTag(82);
-            output.WriteString(FirmwareBrand);
-          }
-          if (FirmwareTags.Length != 0) {
-            output.WriteRawTag(98);
-            output.WriteString(FirmwareTags);
-          }
-          if (FirmwareType.Length != 0) {
-            output.WriteRawTag(106);
-            output.WriteString(FirmwareType);
-          }
-          if (FirmwareFingerprint.Length != 0) {
-            output.WriteRawTag(114);
-            output.WriteString(FirmwareFingerprint);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (DeviceId.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceId);
-          }
-          if (AndroidBoardName.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(AndroidBoardName);
-          }
-          if (AndroidBootloader.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(AndroidBootloader);
-          }
-          if (DeviceBrand.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceBrand);
-          }
-          if (DeviceModel.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceModel);
-          }
-          if (DeviceModelIdentifier.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceModelIdentifier);
-          }
-          if (DeviceModelBoot.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceModelBoot);
-          }
-          if (HardwareManufacturer.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(HardwareManufacturer);
-          }
-          if (HardwareModel.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(HardwareModel);
-          }
-          if (FirmwareBrand.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareBrand);
-          }
-          if (FirmwareTags.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareTags);
-          }
-          if (FirmwareType.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareType);
-          }
-          if (FirmwareFingerprint.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(FirmwareFingerprint);
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(DeviceInfo other) {
-          if (other == null) {
-            return;
-          }
-          if (other.DeviceId.Length != 0) {
-            DeviceId = other.DeviceId;
-          }
-          if (other.AndroidBoardName.Length != 0) {
-            AndroidBoardName = other.AndroidBoardName;
-          }
-          if (other.AndroidBootloader.Length != 0) {
-            AndroidBootloader = other.AndroidBootloader;
-          }
-          if (other.DeviceBrand.Length != 0) {
-            DeviceBrand = other.DeviceBrand;
-          }
-          if (other.DeviceModel.Length != 0) {
-            DeviceModel = other.DeviceModel;
-          }
-          if (other.DeviceModelIdentifier.Length != 0) {
-            DeviceModelIdentifier = other.DeviceModelIdentifier;
-          }
-          if (other.DeviceModelBoot.Length != 0) {
-            DeviceModelBoot = other.DeviceModelBoot;
-          }
-          if (other.HardwareManufacturer.Length != 0) {
-            HardwareManufacturer = other.HardwareManufacturer;
-          }
-          if (other.HardwareModel.Length != 0) {
-            HardwareModel = other.HardwareModel;
-          }
-          if (other.FirmwareBrand.Length != 0) {
-            FirmwareBrand = other.FirmwareBrand;
-          }
-          if (other.FirmwareTags.Length != 0) {
-            FirmwareTags = other.FirmwareTags;
-          }
-          if (other.FirmwareType.Length != 0) {
-            FirmwareType = other.FirmwareType;
-          }
-          if (other.FirmwareFingerprint.Length != 0) {
-            FirmwareFingerprint = other.FirmwareFingerprint;
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                input.SkipLastField();
-                break;
-              case 10: {
-                DeviceId = input.ReadString();
-                break;
-              }
-              case 18: {
-                AndroidBoardName = input.ReadString();
-                break;
-              }
-              case 26: {
-                AndroidBootloader = input.ReadString();
-                break;
-              }
-              case 34: {
-                DeviceBrand = input.ReadString();
-                break;
-              }
-              case 42: {
-                DeviceModel = input.ReadString();
-                break;
-              }
-              case 50: {
-                DeviceModelIdentifier = input.ReadString();
-                break;
-              }
-              case 58: {
-                DeviceModelBoot = input.ReadString();
-                break;
-              }
-              case 66: {
-                HardwareManufacturer = input.ReadString();
-                break;
-              }
-              case 74: {
-                HardwareModel = input.ReadString();
-                break;
-              }
-              case 82: {
-                FirmwareBrand = input.ReadString();
-                break;
-              }
-              case 98: {
-                FirmwareTags = input.ReadString();
-                break;
-              }
-              case 106: {
-                FirmwareType = input.ReadString();
-                break;
-              }
-              case 114: {
-                FirmwareFingerprint = input.ReadString();
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
-      /// <summary>
-      ///  Only used in iOS - Android just sends an empty version
-      /// </summary>
-      public sealed partial class ActivityStatus : pb::IMessage<ActivityStatus> {
-        private static readonly pb::MessageParser<ActivityStatus> _parser = new pb::MessageParser<ActivityStatus>(() => new ActivityStatus());
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<ActivityStatus> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::POGOProtos.Networking.Envelopes.Signature.Descriptor.NestedTypes[4]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ActivityStatus() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ActivityStatus(ActivityStatus other) : this() {
-          startTimeMs_ = other.startTimeMs_;
-          unknownStatus_ = other.unknownStatus_;
-          walking_ = other.walking_;
-          running_ = other.running_;
-          stationary_ = other.stationary_;
-          automotive_ = other.automotive_;
-          tilting_ = other.tilting_;
-          cycling_ = other.cycling_;
-          status_ = other.status_;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ActivityStatus Clone() {
-          return new ActivityStatus(this);
-        }
-
-        /// <summary>Field number for the "start_time_ms" field.</summary>
-        public const int StartTimeMsFieldNumber = 1;
-        private ulong startTimeMs_;
-        /// <summary>
-        ///  all of these had 1 as their value
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ulong StartTimeMs {
-          get { return startTimeMs_; }
-          set {
-            startTimeMs_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "unknown_status" field.</summary>
-        public const int UnknownStatusFieldNumber = 2;
-        private bool unknownStatus_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool UnknownStatus {
-          get { return unknownStatus_; }
-          set {
-            unknownStatus_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "walking" field.</summary>
-        public const int WalkingFieldNumber = 3;
-        private bool walking_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Walking {
-          get { return walking_; }
-          set {
-            walking_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "running" field.</summary>
-        public const int RunningFieldNumber = 4;
-        private bool running_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Running {
-          get { return running_; }
-          set {
-            running_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "stationary" field.</summary>
-        public const int StationaryFieldNumber = 5;
-        private bool stationary_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Stationary {
-          get { return stationary_; }
-          set {
-            stationary_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "automotive" field.</summary>
-        public const int AutomotiveFieldNumber = 6;
-        private bool automotive_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Automotive {
-          get { return automotive_; }
-          set {
-            automotive_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "tilting" field.</summary>
-        public const int TiltingFieldNumber = 7;
-        private bool tilting_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Tilting {
-          get { return tilting_; }
-          set {
-            tilting_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "cycling" field.</summary>
-        public const int CyclingFieldNumber = 8;
-        private bool cycling_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Cycling {
-          get { return cycling_; }
-          set {
-            cycling_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "status" field.</summary>
-        public const int StatusFieldNumber = 9;
-        private pb::ByteString status_ = pb::ByteString.Empty;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pb::ByteString Status {
-          get { return status_; }
-          set {
-            status_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as ActivityStatus);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(ActivityStatus other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (StartTimeMs != other.StartTimeMs) return false;
-          if (UnknownStatus != other.UnknownStatus) return false;
-          if (Walking != other.Walking) return false;
-          if (Running != other.Running) return false;
-          if (Stationary != other.Stationary) return false;
-          if (Automotive != other.Automotive) return false;
-          if (Tilting != other.Tilting) return false;
-          if (Cycling != other.Cycling) return false;
-          if (Status != other.Status) return false;
-          return true;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (StartTimeMs != 0UL) hash ^= StartTimeMs.GetHashCode();
-          if (UnknownStatus != false) hash ^= UnknownStatus.GetHashCode();
-          if (Walking != false) hash ^= Walking.GetHashCode();
-          if (Running != false) hash ^= Running.GetHashCode();
-          if (Stationary != false) hash ^= Stationary.GetHashCode();
-          if (Automotive != false) hash ^= Automotive.GetHashCode();
-          if (Tilting != false) hash ^= Tilting.GetHashCode();
-          if (Cycling != false) hash ^= Cycling.GetHashCode();
-          if (Status.Length != 0) hash ^= Status.GetHashCode();
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (StartTimeMs != 0UL) {
-            output.WriteRawTag(8);
-            output.WriteUInt64(StartTimeMs);
-          }
-          if (UnknownStatus != false) {
-            output.WriteRawTag(16);
-            output.WriteBool(UnknownStatus);
-          }
-          if (Walking != false) {
-            output.WriteRawTag(24);
-            output.WriteBool(Walking);
-          }
-          if (Running != false) {
-            output.WriteRawTag(32);
-            output.WriteBool(Running);
-          }
-          if (Stationary != false) {
-            output.WriteRawTag(40);
-            output.WriteBool(Stationary);
-          }
-          if (Automotive != false) {
-            output.WriteRawTag(48);
-            output.WriteBool(Automotive);
-          }
-          if (Tilting != false) {
-            output.WriteRawTag(56);
-            output.WriteBool(Tilting);
-          }
-          if (Cycling != false) {
-            output.WriteRawTag(64);
-            output.WriteBool(Cycling);
-          }
-          if (Status.Length != 0) {
-            output.WriteRawTag(74);
-            output.WriteBytes(Status);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (StartTimeMs != 0UL) {
-            size += 1 + pb::CodedOutputStream.ComputeUInt64Size(StartTimeMs);
-          }
-          if (UnknownStatus != false) {
-            size += 1 + 1;
-          }
-          if (Walking != false) {
-            size += 1 + 1;
-          }
-          if (Running != false) {
-            size += 1 + 1;
-          }
-          if (Stationary != false) {
-            size += 1 + 1;
-          }
-          if (Automotive != false) {
-            size += 1 + 1;
-          }
-          if (Tilting != false) {
-            size += 1 + 1;
-          }
-          if (Cycling != false) {
-            size += 1 + 1;
-          }
-          if (Status.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeBytesSize(Status);
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(ActivityStatus other) {
-          if (other == null) {
-            return;
-          }
-          if (other.StartTimeMs != 0UL) {
-            StartTimeMs = other.StartTimeMs;
-          }
-          if (other.UnknownStatus != false) {
-            UnknownStatus = other.UnknownStatus;
-          }
-          if (other.Walking != false) {
-            Walking = other.Walking;
-          }
-          if (other.Running != false) {
-            Running = other.Running;
-          }
-          if (other.Stationary != false) {
-            Stationary = other.Stationary;
-          }
-          if (other.Automotive != false) {
-            Automotive = other.Automotive;
-          }
-          if (other.Tilting != false) {
-            Tilting = other.Tilting;
-          }
-          if (other.Cycling != false) {
-            Cycling = other.Cycling;
-          }
-          if (other.Status.Length != 0) {
-            Status = other.Status;
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                input.SkipLastField();
-                break;
-              case 8: {
-                StartTimeMs = input.ReadUInt64();
-                break;
-              }
-              case 16: {
-                UnknownStatus = input.ReadBool();
-                break;
-              }
-              case 24: {
-                Walking = input.ReadBool();
-                break;
-              }
-              case 32: {
-                Running = input.ReadBool();
-                break;
-              }
-              case 40: {
-                Stationary = input.ReadBool();
-                break;
-              }
-              case 48: {
-                Automotive = input.ReadBool();
-                break;
-              }
-              case 56: {
-                Tilting = input.ReadBool();
-                break;
-              }
-              case 64: {
-                Cycling = input.ReadBool();
-                break;
-              }
-              case 74: {
-                Status = input.ReadBytes();
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
     }
     #endregion
+
+  }
+
+  /// <summary>
+  ///  Just a junk message to denote that we don't currently know what message something is.
+  /// </summary>
+  public sealed partial class UnknownMessage : pb::IMessage<UnknownMessage> {
+    private static readonly pb::MessageParser<UnknownMessage> _parser = new pb::MessageParser<UnknownMessage>(() => new UnknownMessage());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UnknownMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::POGOProtos.Networking.Envelopes.SignatureReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UnknownMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UnknownMessage(UnknownMessage other) : this() {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UnknownMessage Clone() {
+      return new UnknownMessage(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UnknownMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UnknownMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UnknownMessage other) {
+      if (other == null) {
+        return;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+        }
+      }
+    }
 
   }
 
