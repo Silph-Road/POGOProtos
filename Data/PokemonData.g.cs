@@ -25,7 +25,7 @@ namespace POGOProtos.Data {
             "CiFQT0dPUHJvdG9zL0RhdGEvUG9rZW1vbkRhdGEucHJvdG8SD1BPR09Qcm90",
             "b3MuRGF0YRogUE9HT1Byb3Rvcy9FbnVtcy9Qb2tlbW9uSWQucHJvdG8aIlBP",
             "R09Qcm90b3MvRW51bXMvUG9rZW1vbk1vdmUucHJvdG8aJlBPR09Qcm90b3Mv",
-            "SW52ZW50b3J5L0l0ZW0vSXRlbUlkLnByb3RvItQGCgtQb2tlbW9uRGF0YRIK",
+            "SW52ZW50b3J5L0l0ZW0vSXRlbUlkLnByb3RvIoQHCgtQb2tlbW9uRGF0YRIK",
             "CgJpZBgBIAEoBhIvCgpwb2tlbW9uX2lkGAIgASgOMhsuUE9HT1Byb3Rvcy5F",
             "bnVtcy5Qb2tlbW9uSWQSCgoCY3AYAyABKAUSDwoHc3RhbWluYRgEIAEoBRIT",
             "CgtzdGFtaW5hX21heBgFIAEoBRItCgZtb3ZlXzEYBiABKA4yHS5QT0dPUHJv",
@@ -44,11 +44,12 @@ namespace POGOProtos.Data {
             "cGdyYWRlcxgbIAEoBRIgChhhZGRpdGlvbmFsX2NwX211bHRpcGxpZXIYHCAB",
             "KAISEAoIZmF2b3JpdGUYHSABKAUSEAoIbmlja25hbWUYHiABKAkSEQoJZnJv",
             "bV9mb3J0GB8gASgFEhsKE2J1ZGR5X2NhbmR5X2F3YXJkZWQYICABKAUSHQoV",
-            "YnVkZHlfdG90YWxfa21fd2Fsa2VkGCEgASgCYgZwcm90bzM="));
+            "YnVkZHlfdG90YWxfa21fd2Fsa2VkGCEgASgCEhoKEmRpc3BsYXlfcG9rZW1v",
+            "bl9pZBgiIAEoBRISCgpkaXNwbGF5X2NwGCMgASgFYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, global::POGOProtos.Enums.PokemonMoveReflection.Descriptor, global::POGOProtos.Inventory.Item.ItemIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.PokemonData), global::POGOProtos.Data.PokemonData.Parser, new[]{ "Id", "PokemonId", "Cp", "Stamina", "StaminaMax", "Move1", "Move2", "DeployedFortId", "OwnerName", "IsEgg", "EggKmWalkedTarget", "EggKmWalkedStart", "Origin", "HeightM", "WeightKg", "IndividualAttack", "IndividualDefense", "IndividualStamina", "CpMultiplier", "Pokeball", "CapturedCellId", "BattlesAttacked", "BattlesDefended", "EggIncubatorId", "CreationTimeMs", "NumUpgrades", "AdditionalCpMultiplier", "Favorite", "Nickname", "FromFort", "BuddyCandyAwarded", "BuddyTotalKmWalked" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.PokemonData), global::POGOProtos.Data.PokemonData.Parser, new[]{ "Id", "PokemonId", "Cp", "Stamina", "StaminaMax", "Move1", "Move2", "DeployedFortId", "OwnerName", "IsEgg", "EggKmWalkedTarget", "EggKmWalkedStart", "Origin", "HeightM", "WeightKg", "IndividualAttack", "IndividualDefense", "IndividualStamina", "CpMultiplier", "Pokeball", "CapturedCellId", "BattlesAttacked", "BattlesDefended", "EggIncubatorId", "CreationTimeMs", "NumUpgrades", "AdditionalCpMultiplier", "Favorite", "Nickname", "FromFort", "BuddyCandyAwarded", "BuddyTotalKmWalked", "DisplayPokemonId", "DisplayCp" }, null, null, null)
           }));
     }
     #endregion
@@ -111,6 +112,8 @@ namespace POGOProtos.Data {
       fromFort_ = other.fromFort_;
       buddyCandyAwarded_ = other.buddyCandyAwarded_;
       buddyTotalKmWalked_ = other.buddyTotalKmWalked_;
+      displayPokemonId_ = other.displayPokemonId_;
+      displayCp_ = other.displayCp_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -470,6 +473,28 @@ namespace POGOProtos.Data {
       }
     }
 
+    /// <summary>Field number for the "display_pokemon_id" field.</summary>
+    public const int DisplayPokemonIdFieldNumber = 34;
+    private int displayPokemonId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DisplayPokemonId {
+      get { return displayPokemonId_; }
+      set {
+        displayPokemonId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "display_cp" field.</summary>
+    public const int DisplayCpFieldNumber = 35;
+    private int displayCp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DisplayCp {
+      get { return displayCp_; }
+      set {
+        displayCp_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PokemonData);
@@ -515,6 +540,8 @@ namespace POGOProtos.Data {
       if (FromFort != other.FromFort) return false;
       if (BuddyCandyAwarded != other.BuddyCandyAwarded) return false;
       if (BuddyTotalKmWalked != other.BuddyTotalKmWalked) return false;
+      if (DisplayPokemonId != other.DisplayPokemonId) return false;
+      if (DisplayCp != other.DisplayCp) return false;
       return true;
     }
 
@@ -553,6 +580,8 @@ namespace POGOProtos.Data {
       if (FromFort != 0) hash ^= FromFort.GetHashCode();
       if (BuddyCandyAwarded != 0) hash ^= BuddyCandyAwarded.GetHashCode();
       if (BuddyTotalKmWalked != 0F) hash ^= BuddyTotalKmWalked.GetHashCode();
+      if (DisplayPokemonId != 0) hash ^= DisplayPokemonId.GetHashCode();
+      if (DisplayCp != 0) hash ^= DisplayCp.GetHashCode();
       return hash;
     }
 
@@ -691,6 +720,14 @@ namespace POGOProtos.Data {
         output.WriteRawTag(141, 2);
         output.WriteFloat(BuddyTotalKmWalked);
       }
+      if (DisplayPokemonId != 0) {
+        output.WriteRawTag(144, 2);
+        output.WriteInt32(DisplayPokemonId);
+      }
+      if (DisplayCp != 0) {
+        output.WriteRawTag(152, 2);
+        output.WriteInt32(DisplayCp);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -791,6 +828,12 @@ namespace POGOProtos.Data {
       }
       if (BuddyTotalKmWalked != 0F) {
         size += 2 + 4;
+      }
+      if (DisplayPokemonId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(DisplayPokemonId);
+      }
+      if (DisplayCp != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(DisplayCp);
       }
       return size;
     }
@@ -895,6 +938,12 @@ namespace POGOProtos.Data {
       }
       if (other.BuddyTotalKmWalked != 0F) {
         BuddyTotalKmWalked = other.BuddyTotalKmWalked;
+      }
+      if (other.DisplayPokemonId != 0) {
+        DisplayPokemonId = other.DisplayPokemonId;
+      }
+      if (other.DisplayCp != 0) {
+        DisplayCp = other.DisplayCp;
       }
     }
 
@@ -1032,6 +1081,14 @@ namespace POGOProtos.Data {
           }
           case 269: {
             BuddyTotalKmWalked = input.ReadFloat();
+            break;
+          }
+          case 272: {
+            DisplayPokemonId = input.ReadInt32();
+            break;
+          }
+          case 280: {
+            DisplayCp = input.ReadInt32();
             break;
           }
         }

@@ -95,6 +95,8 @@
     <Compile Include="Data\Player\PlayerStats.g.cs" />
     <Compile Include="Data\PokedexEntry.g.cs" />
     <Compile Include="Data\PokemonData.g.cs" />
+    <Compile Include="Data\Quests\DailyQuest.g.cs" />
+    <Compile Include="Data\Quests\Quest.g.cs" />
     <Compile Include="Enums\ActivityType.g.cs" />
     <Compile Include="Enums\BadgeType.g.cs" />
     <Compile Include="Enums\CameraInterpolation.g.cs" />
@@ -110,6 +112,7 @@
     <Compile Include="Enums\PokemonMovementType.g.cs" />
     <Compile Include="Enums\PokemonRarity.g.cs" />
     <Compile Include="Enums\PokemonType.g.cs" />
+    <Compile Include="Enums\QuestType.g.cs" />
     <Compile Include="Enums\TeamColor.g.cs" />
     <Compile Include="Enums\TutorialState.g.cs" />
     <Compile Include="Inventory\AppliedItem.g.cs" />
@@ -269,6 +272,7 @@
     <Compile Include="Networking\Responses\VerifyChallengeResponse.g.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\DownloadSettingsAction.g.cs" />
+    <Compile Include="Settings\FestivalSettings.g.cs" />
     <Compile Include="Settings\FortSettings.g.cs" />
     <Compile Include="Settings\GlobalSettings.g.cs" />
     <Compile Include="Settings\GpsSettings.g.cs" />
