@@ -25,7 +25,7 @@ namespace POGOProtos.Data {
             "CiFQT0dPUHJvdG9zL0RhdGEvUG9rZW1vbkRhdGEucHJvdG8SD1BPR09Qcm90",
             "b3MuRGF0YRogUE9HT1Byb3Rvcy9FbnVtcy9Qb2tlbW9uSWQucHJvdG8aIlBP",
             "R09Qcm90b3MvRW51bXMvUG9rZW1vbk1vdmUucHJvdG8aJlBPR09Qcm90b3Mv",
-            "SW52ZW50b3J5L0l0ZW0vSXRlbUlkLnByb3RvIrUGCgtQb2tlbW9uRGF0YRIK",
+            "SW52ZW50b3J5L0l0ZW0vSXRlbUlkLnByb3RvItQGCgtQb2tlbW9uRGF0YRIK",
             "CgJpZBgBIAEoBhIvCgpwb2tlbW9uX2lkGAIgASgOMhsuUE9HT1Byb3Rvcy5F",
             "bnVtcy5Qb2tlbW9uSWQSCgoCY3AYAyABKAUSDwoHc3RhbWluYRgEIAEoBRIT",
             "CgtzdGFtaW5hX21heBgFIAEoBRItCgZtb3ZlXzEYBiABKA4yHS5QT0dPUHJv",
@@ -43,12 +43,12 @@ namespace POGOProtos.Data {
             "cl9pZBgZIAEoCRIYChBjcmVhdGlvbl90aW1lX21zGBogASgEEhQKDG51bV91",
             "cGdyYWRlcxgbIAEoBRIgChhhZGRpdGlvbmFsX2NwX211bHRpcGxpZXIYHCAB",
             "KAISEAoIZmF2b3JpdGUYHSABKAUSEAoIbmlja25hbWUYHiABKAkSEQoJZnJv",
-            "bV9mb3J0GB8gASgFEhsKE2J1ZGR5X2NhbmR5X2F3YXJkZWQYICABKAViBnBy",
-            "b3RvMw=="));
+            "bV9mb3J0GB8gASgFEhsKE2J1ZGR5X2NhbmR5X2F3YXJkZWQYICABKAUSHQoV",
+            "YnVkZHlfdG90YWxfa21fd2Fsa2VkGCEgASgCYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Enums.PokemonIdReflection.Descriptor, global::POGOProtos.Enums.PokemonMoveReflection.Descriptor, global::POGOProtos.Inventory.Item.ItemIdReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.PokemonData), global::POGOProtos.Data.PokemonData.Parser, new[]{ "Id", "PokemonId", "Cp", "Stamina", "StaminaMax", "Move1", "Move2", "DeployedFortId", "OwnerName", "IsEgg", "EggKmWalkedTarget", "EggKmWalkedStart", "Origin", "HeightM", "WeightKg", "IndividualAttack", "IndividualDefense", "IndividualStamina", "CpMultiplier", "Pokeball", "CapturedCellId", "BattlesAttacked", "BattlesDefended", "EggIncubatorId", "CreationTimeMs", "NumUpgrades", "AdditionalCpMultiplier", "Favorite", "Nickname", "FromFort", "BuddyCandyAwarded" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.PokemonData), global::POGOProtos.Data.PokemonData.Parser, new[]{ "Id", "PokemonId", "Cp", "Stamina", "StaminaMax", "Move1", "Move2", "DeployedFortId", "OwnerName", "IsEgg", "EggKmWalkedTarget", "EggKmWalkedStart", "Origin", "HeightM", "WeightKg", "IndividualAttack", "IndividualDefense", "IndividualStamina", "CpMultiplier", "Pokeball", "CapturedCellId", "BattlesAttacked", "BattlesDefended", "EggIncubatorId", "CreationTimeMs", "NumUpgrades", "AdditionalCpMultiplier", "Favorite", "Nickname", "FromFort", "BuddyCandyAwarded", "BuddyTotalKmWalked" }, null, null, null)
           }));
     }
     #endregion
@@ -110,6 +110,7 @@ namespace POGOProtos.Data {
       nickname_ = other.nickname_;
       fromFort_ = other.fromFort_;
       buddyCandyAwarded_ = other.buddyCandyAwarded_;
+      buddyTotalKmWalked_ = other.buddyTotalKmWalked_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -458,6 +459,17 @@ namespace POGOProtos.Data {
       }
     }
 
+    /// <summary>Field number for the "buddy_total_km_walked" field.</summary>
+    public const int BuddyTotalKmWalkedFieldNumber = 33;
+    private float buddyTotalKmWalked_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float BuddyTotalKmWalked {
+      get { return buddyTotalKmWalked_; }
+      set {
+        buddyTotalKmWalked_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PokemonData);
@@ -502,6 +514,7 @@ namespace POGOProtos.Data {
       if (Nickname != other.Nickname) return false;
       if (FromFort != other.FromFort) return false;
       if (BuddyCandyAwarded != other.BuddyCandyAwarded) return false;
+      if (BuddyTotalKmWalked != other.BuddyTotalKmWalked) return false;
       return true;
     }
 
@@ -539,6 +552,7 @@ namespace POGOProtos.Data {
       if (Nickname.Length != 0) hash ^= Nickname.GetHashCode();
       if (FromFort != 0) hash ^= FromFort.GetHashCode();
       if (BuddyCandyAwarded != 0) hash ^= BuddyCandyAwarded.GetHashCode();
+      if (BuddyTotalKmWalked != 0F) hash ^= BuddyTotalKmWalked.GetHashCode();
       return hash;
     }
 
@@ -673,6 +687,10 @@ namespace POGOProtos.Data {
         output.WriteRawTag(128, 2);
         output.WriteInt32(BuddyCandyAwarded);
       }
+      if (BuddyTotalKmWalked != 0F) {
+        output.WriteRawTag(141, 2);
+        output.WriteFloat(BuddyTotalKmWalked);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -770,6 +788,9 @@ namespace POGOProtos.Data {
       }
       if (BuddyCandyAwarded != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(BuddyCandyAwarded);
+      }
+      if (BuddyTotalKmWalked != 0F) {
+        size += 2 + 4;
       }
       return size;
     }
@@ -871,6 +892,9 @@ namespace POGOProtos.Data {
       }
       if (other.BuddyCandyAwarded != 0) {
         BuddyCandyAwarded = other.BuddyCandyAwarded;
+      }
+      if (other.BuddyTotalKmWalked != 0F) {
+        BuddyTotalKmWalked = other.BuddyTotalKmWalked;
       }
     }
 
@@ -1004,6 +1028,10 @@ namespace POGOProtos.Data {
           }
           case 256: {
             BuddyCandyAwarded = input.ReadInt32();
+            break;
+          }
+          case 269: {
+            BuddyTotalKmWalked = input.ReadFloat();
             break;
           }
         }
