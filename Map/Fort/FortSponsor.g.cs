@@ -23,9 +23,9 @@ namespace POGOProtos.Map.Fort {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVQT0dPUHJvdG9zL01hcC9Gb3J0L0ZvcnRTcG9uc29yLnByb3RvEhNQT0dP",
-            "UHJvdG9zLk1hcC5Gb3J0KkIKC0ZvcnRTcG9uc29yEhEKDVVOU0VUX1NQT05T",
-            "T1IQABINCglNQ0RPTkFMRFMQARIRCg1QT0tFTU9OX1NUT1JFEAJiBnByb3Rv",
-            "Mw=="));
+            "UHJvdG9zLk1hcC5Gb3J0KmUKC0ZvcnRTcG9uc29yEhEKDVVOU0VUX1NQT05T",
+            "T1IQABINCglNQ0RPTkFMRFMQARIRCg1QT0tFTU9OX1NUT1JFEAISCAoEVE9I",
+            "TxADEgwKCFNPRlRCQU5LEAQSCQoFR0xPQkUQBWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::POGOProtos.Map.Fort.FortSponsor), }, null));
@@ -38,6 +38,9 @@ namespace POGOProtos.Map.Fort {
     [pbr::OriginalName("UNSET_SPONSOR")] UnsetSponsor = 0,
     [pbr::OriginalName("MCDONALDS")] Mcdonalds = 1,
     [pbr::OriginalName("POKEMON_STORE")] PokemonStore = 2,
+    [pbr::OriginalName("TOHO")] Toho = 3,
+    [pbr::OriginalName("SOFTBANK")] Softbank = 4,
+    [pbr::OriginalName("GLOBE")] Globe = 5,
   }
 
   #endregion

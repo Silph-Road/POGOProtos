@@ -23,7 +23,7 @@ namespace POGOProtos.Enums {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJQT0dPUHJvdG9zL0VudW1zL1Bva2Vtb25Nb3ZlLnByb3RvEhBQT0dPUHJv",
-            "dG9zLkVudW1zKs4XCgtQb2tlbW9uTW92ZRIOCgpNT1ZFX1VOU0VUEAASEQoN",
+            "dG9zLkVudW1zKuMXCgtQb2tlbW9uTW92ZRIOCgpNT1ZFX1VOU0VUEAASEQoN",
             "VEhVTkRFUl9TSE9DSxABEhAKDFFVSUNLX0FUVEFDSxACEgsKB1NDUkFUQ0gQ",
             "AxIJCgVFTUJFUhAEEg0KCVZJTkVfV0hJUBAFEgoKBlRBQ0tMRRAGEg4KClJB",
             "Wk9SX0xFQUYQBxINCglUQUtFX0RPV04QCBINCglXQVRFUl9HVU4QCRIICgRC",
@@ -90,7 +90,8 @@ namespace POGOProtos.Enums {
             "6gESEwoOQ09ORlVTSU9OX0ZBU1QQ6wESFgoRUE9JU09OX1NUSU5HX0ZBU1QQ",
             "7AESEAoLQlVCQkxFX0ZBU1QQ7QESFgoRRkVJTlRfQVRUQUNLX0ZBU1QQ7gES",
             "FAoPU1RFRUxfV0lOR19GQVNUEO8BEhMKDkZJUkVfRkFOR19GQVNUEPABEhQK",
-            "D1JPQ0tfU01BU0hfRkFTVBDxAWIGcHJvdG8z"));
+            "D1JPQ0tfU01BU0hfRkFTVBDxARITCg5UUkFOU0ZPUk1fRkFTVBDyAWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::POGOProtos.Enums.PokemonMove), }, null));
@@ -280,6 +281,7 @@ namespace POGOProtos.Enums {
     [pbr::OriginalName("STEEL_WING_FAST")] SteelWingFast = 239,
     [pbr::OriginalName("FIRE_FANG_FAST")] FireFangFast = 240,
     [pbr::OriginalName("ROCK_SMASH_FAST")] RockSmashFast = 241,
+    [pbr::OriginalName("TRANSFORM_FAST")] TransformFast = 242,
   }
 
   #endregion

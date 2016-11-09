@@ -30,7 +30,7 @@ namespace POGOProtos.Data {
             "b3Rvcy9EYXRhL1BsYXllci9Db250YWN0U2V0dGluZ3MucHJvdG8aJVBPR09Q",
             "cm90b3MvRGF0YS9QbGF5ZXIvQ3VycmVuY3kucHJvdG8aIlBPR09Qcm90b3Mv",
             "RGF0YS9CdWRkeVBva2Vtb24ucHJvdG8aIFBPR09Qcm90b3MvRW51bXMvVGVh",
-            "bUNvbG9yLnByb3RvItwECgpQbGF5ZXJEYXRhEh0KFWNyZWF0aW9uX3RpbWVz",
+            "bUNvbG9yLnByb3RvIvsECgpQbGF5ZXJEYXRhEh0KFWNyZWF0aW9uX3RpbWVz",
             "dGFtcF9tcxgBIAEoAxIQCgh1c2VybmFtZRgCIAEoCRIpCgR0ZWFtGAUgASgO",
             "MhsuUE9HT1Byb3Rvcy5FbnVtcy5UZWFtQ29sb3ISOwoOdHV0b3JpYWxfc3Rh",
             "dGUYByADKA4yHy5QT0dPUHJvdG9zLkVudW1zLlR1dG9yaWFsU3RhdGVCAhAB",
@@ -43,11 +43,12 @@ namespace POGOProtos.Data {
             "YXRhLlBsYXllci5Db250YWN0U2V0dGluZ3MSNAoKY3VycmVuY2llcxgOIAMo",
             "CzIgLlBPR09Qcm90b3MuRGF0YS5QbGF5ZXIuQ3VycmVuY3kSIQoZcmVtYWlu",
             "aW5nX2NvZGVuYW1lX2NsYWltcxgPIAEoBRI0Cg1idWRkeV9wb2tlbW9uGBAg",
-            "ASgLMh0uUE9HT1Byb3Rvcy5EYXRhLkJ1ZGR5UG9rZW1vbmIGcHJvdG8z"));
+            "ASgLMh0uUE9HT1Byb3Rvcy5EYXRhLkJ1ZGR5UG9rZW1vbhIdChViYXR0bGVf",
+            "bG9ja291dF9lbmRfbXMYESABKANiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::POGOProtos.Enums.TutorialStateReflection.Descriptor, global::POGOProtos.Data.Player.PlayerAvatarReflection.Descriptor, global::POGOProtos.Data.Player.DailyBonusReflection.Descriptor, global::POGOProtos.Data.Player.EquippedBadgeReflection.Descriptor, global::POGOProtos.Data.Player.ContactSettingsReflection.Descriptor, global::POGOProtos.Data.Player.CurrencyReflection.Descriptor, global::POGOProtos.Data.BuddyPokemonReflection.Descriptor, global::POGOProtos.Enums.TeamColorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.PlayerData), global::POGOProtos.Data.PlayerData.Parser, new[]{ "CreationTimestampMs", "Username", "Team", "TutorialState", "Avatar", "MaxPokemonStorage", "MaxItemStorage", "DailyBonus", "EquippedBadge", "ContactSettings", "Currencies", "RemainingCodenameClaims", "BuddyPokemon" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::POGOProtos.Data.PlayerData), global::POGOProtos.Data.PlayerData.Parser, new[]{ "CreationTimestampMs", "Username", "Team", "TutorialState", "Avatar", "MaxPokemonStorage", "MaxItemStorage", "DailyBonus", "EquippedBadge", "ContactSettings", "Currencies", "RemainingCodenameClaims", "BuddyPokemon", "BattleLockoutEndMs" }, null, null, null)
           }));
     }
     #endregion
@@ -91,6 +92,7 @@ namespace POGOProtos.Data {
       currencies_ = other.currencies_.Clone();
       remainingCodenameClaims_ = other.remainingCodenameClaims_;
       BuddyPokemon = other.buddyPokemon_ != null ? other.BuddyPokemon.Clone() : null;
+      battleLockoutEndMs_ = other.battleLockoutEndMs_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -239,6 +241,17 @@ namespace POGOProtos.Data {
       }
     }
 
+    /// <summary>Field number for the "battle_lockout_end_ms" field.</summary>
+    public const int BattleLockoutEndMsFieldNumber = 17;
+    private long battleLockoutEndMs_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long BattleLockoutEndMs {
+      get { return battleLockoutEndMs_; }
+      set {
+        battleLockoutEndMs_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PlayerData);
@@ -265,6 +278,7 @@ namespace POGOProtos.Data {
       if(!currencies_.Equals(other.currencies_)) return false;
       if (RemainingCodenameClaims != other.RemainingCodenameClaims) return false;
       if (!object.Equals(BuddyPokemon, other.BuddyPokemon)) return false;
+      if (BattleLockoutEndMs != other.BattleLockoutEndMs) return false;
       return true;
     }
 
@@ -284,6 +298,7 @@ namespace POGOProtos.Data {
       hash ^= currencies_.GetHashCode();
       if (RemainingCodenameClaims != 0) hash ^= RemainingCodenameClaims.GetHashCode();
       if (buddyPokemon_ != null) hash ^= BuddyPokemon.GetHashCode();
+      if (BattleLockoutEndMs != 0L) hash ^= BattleLockoutEndMs.GetHashCode();
       return hash;
     }
 
@@ -340,6 +355,10 @@ namespace POGOProtos.Data {
         output.WriteRawTag(130, 1);
         output.WriteMessage(BuddyPokemon);
       }
+      if (BattleLockoutEndMs != 0L) {
+        output.WriteRawTag(136, 1);
+        output.WriteInt64(BattleLockoutEndMs);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -379,6 +398,9 @@ namespace POGOProtos.Data {
       }
       if (buddyPokemon_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BuddyPokemon);
+      }
+      if (BattleLockoutEndMs != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(BattleLockoutEndMs);
       }
       return size;
     }
@@ -437,6 +459,9 @@ namespace POGOProtos.Data {
           buddyPokemon_ = new global::POGOProtos.Data.BuddyPokemon();
         }
         BuddyPokemon.MergeFrom(other.BuddyPokemon);
+      }
+      if (other.BattleLockoutEndMs != 0L) {
+        BattleLockoutEndMs = other.BattleLockoutEndMs;
       }
     }
 
@@ -514,6 +539,10 @@ namespace POGOProtos.Data {
               buddyPokemon_ = new global::POGOProtos.Data.BuddyPokemon();
             }
             input.ReadMessage(buddyPokemon_);
+            break;
+          }
+          case 136: {
+            BattleLockoutEndMs = input.ReadInt64();
             break;
           }
         }
